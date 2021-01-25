@@ -1,0 +1,878 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */; };
+		C7075E0225BF22AD000B611C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E0125BF22AD000B611C /* ContentView.swift */; };
+		C7075E0425BF22AE000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E0325BF22AE000B611C /* Assets.xcassets */; };
+		C7075E0725BF22AE000B611C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E0625BF22AE000B611C /* Preview Assets.xcassets */; };
+		C7075E1225BF22AE000B611C /* CyclingTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E1125BF22AE000B611C /* CyclingTimerTests.swift */; };
+		C7075E1D25BF22AE000B611C /* CyclingTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E1C25BF22AE000B611C /* CyclingTimerUITests.swift */; };
+		C7075E2225BF22AE000B611C /* CyclingTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C7075E2725BF22AF000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E2625BF22AF000B611C /* Assets.xcassets */; };
+		C7075E2E25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C7075E2D25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C7075E3325BF22AF000B611C /* CyclingTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E3225BF22AF000B611C /* CyclingTimerApp.swift */; };
+		C7075E3525BF22AF000B611C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E3425BF22AF000B611C /* ContentView.swift */; };
+		C7075E3725BF22AF000B611C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E3625BF22AF000B611C /* NotificationController.swift */; };
+		C7075E3925BF22AF000B611C /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E3825BF22AF000B611C /* NotificationView.swift */; };
+		C7075E3B25BF22AF000B611C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E3A25BF22AF000B611C /* ComplicationController.swift */; };
+		C7075E3D25BF22AF000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3C25BF22AF000B611C /* Assets.xcassets */; };
+		C7075E4025BF22AF000B611C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7075E0E25BF22AE000B611C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7075DFB25BF22AD000B611C;
+			remoteInfo = CyclingTimer;
+		};
+		C7075E1925BF22AE000B611C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7075DFB25BF22AD000B611C;
+			remoteInfo = CyclingTimer;
+		};
+		C7075E2325BF22AE000B611C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7075E2025BF22AE000B611C;
+			remoteInfo = "CyclingTimer WatchKit App";
+		};
+		C7075E2F25BF22AF000B611C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7075E2C25BF22AF000B611C;
+			remoteInfo = "CyclingTimer WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C7075E4825BF22AF000B611C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C7075E2E25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E4C25BF22AF000B611C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C7075E2225BF22AE000B611C /* CyclingTimer WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C7075DFC25BF22AD000B611C /* CyclingTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyclingTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingTimerApp.swift; sourceTree = "<group>"; };
+		C7075E0125BF22AD000B611C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7075E0325BF22AE000B611C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7075E0625BF22AE000B611C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7075E0825BF22AE000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7075E0D25BF22AE000B611C /* CyclingTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyclingTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7075E1125BF22AE000B611C /* CyclingTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingTimerTests.swift; sourceTree = "<group>"; };
+		C7075E1325BF22AE000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7075E1825BF22AE000B611C /* CyclingTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyclingTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7075E1C25BF22AE000B611C /* CyclingTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingTimerUITests.swift; sourceTree = "<group>"; };
+		C7075E1E25BF22AE000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CyclingTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7075E2625BF22AF000B611C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7075E2825BF22AF000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7075E2D25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CyclingTimer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7075E3225BF22AF000B611C /* CyclingTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingTimerApp.swift; sourceTree = "<group>"; };
+		C7075E3425BF22AF000B611C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7075E3625BF22AF000B611C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C7075E3825BF22AF000B611C /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		C7075E3A25BF22AF000B611C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C7075E3C25BF22AF000B611C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7075E4125BF22AF000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7075E4225BF22AF000B611C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7075DF925BF22AD000B611C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E0A25BF22AE000B611C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E1525BF22AE000B611C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E2A25BF22AF000B611C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7075DF325BF22AD000B611C = {
+			isa = PBXGroup;
+			children = (
+				C7075DFE25BF22AD000B611C /* CyclingTimer */,
+				C7075E1025BF22AE000B611C /* CyclingTimerTests */,
+				C7075E1B25BF22AE000B611C /* CyclingTimerUITests */,
+				C7075E2525BF22AE000B611C /* CyclingTimer WatchKit App */,
+				C7075E3125BF22AF000B611C /* CyclingTimer WatchKit Extension */,
+				C7075DFD25BF22AD000B611C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7075DFD25BF22AD000B611C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7075DFC25BF22AD000B611C /* CyclingTimer.app */,
+				C7075E0D25BF22AE000B611C /* CyclingTimerTests.xctest */,
+				C7075E1825BF22AE000B611C /* CyclingTimerUITests.xctest */,
+				C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */,
+				C7075E2D25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7075DFE25BF22AD000B611C /* CyclingTimer */ = {
+			isa = PBXGroup;
+			children = (
+				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
+				C7075E0125BF22AD000B611C /* ContentView.swift */,
+				C7075E0325BF22AE000B611C /* Assets.xcassets */,
+				C7075E0825BF22AE000B611C /* Info.plist */,
+				C7075E0525BF22AE000B611C /* Preview Content */,
+			);
+			path = CyclingTimer;
+			sourceTree = "<group>";
+		};
+		C7075E0525BF22AE000B611C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E0625BF22AE000B611C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7075E1025BF22AE000B611C /* CyclingTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E1125BF22AE000B611C /* CyclingTimerTests.swift */,
+				C7075E1325BF22AE000B611C /* Info.plist */,
+			);
+			path = CyclingTimerTests;
+			sourceTree = "<group>";
+		};
+		C7075E1B25BF22AE000B611C /* CyclingTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E1C25BF22AE000B611C /* CyclingTimerUITests.swift */,
+				C7075E1E25BF22AE000B611C /* Info.plist */,
+			);
+			path = CyclingTimerUITests;
+			sourceTree = "<group>";
+		};
+		C7075E2525BF22AE000B611C /* CyclingTimer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E2625BF22AF000B611C /* Assets.xcassets */,
+				C7075E2825BF22AF000B611C /* Info.plist */,
+			);
+			path = "CyclingTimer WatchKit App";
+			sourceTree = "<group>";
+		};
+		C7075E3125BF22AF000B611C /* CyclingTimer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E3225BF22AF000B611C /* CyclingTimerApp.swift */,
+				C7075E3425BF22AF000B611C /* ContentView.swift */,
+				C7075E3625BF22AF000B611C /* NotificationController.swift */,
+				C7075E3825BF22AF000B611C /* NotificationView.swift */,
+				C7075E3A25BF22AF000B611C /* ComplicationController.swift */,
+				C7075E3C25BF22AF000B611C /* Assets.xcassets */,
+				C7075E4125BF22AF000B611C /* Info.plist */,
+				C7075E4225BF22AF000B611C /* PushNotificationPayload.apns */,
+				C7075E3E25BF22AF000B611C /* Preview Content */,
+			);
+			path = "CyclingTimer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C7075E3E25BF22AF000B611C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7075DFB25BF22AD000B611C /* CyclingTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7075E4D25BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer" */;
+			buildPhases = (
+				C7075DF825BF22AD000B611C /* Sources */,
+				C7075DF925BF22AD000B611C /* Frameworks */,
+				C7075DFA25BF22AD000B611C /* Resources */,
+				C7075E4C25BF22AF000B611C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7075E2425BF22AE000B611C /* PBXTargetDependency */,
+			);
+			name = CyclingTimer;
+			productName = CyclingTimer;
+			productReference = C7075DFC25BF22AD000B611C /* CyclingTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7075E0C25BF22AE000B611C /* CyclingTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7075E5025BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerTests" */;
+			buildPhases = (
+				C7075E0925BF22AE000B611C /* Sources */,
+				C7075E0A25BF22AE000B611C /* Frameworks */,
+				C7075E0B25BF22AE000B611C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7075E0F25BF22AE000B611C /* PBXTargetDependency */,
+			);
+			name = CyclingTimerTests;
+			productName = CyclingTimerTests;
+			productReference = C7075E0D25BF22AE000B611C /* CyclingTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7075E1725BF22AE000B611C /* CyclingTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7075E5325BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerUITests" */;
+			buildPhases = (
+				C7075E1425BF22AE000B611C /* Sources */,
+				C7075E1525BF22AE000B611C /* Frameworks */,
+				C7075E1625BF22AE000B611C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7075E1A25BF22AE000B611C /* PBXTargetDependency */,
+			);
+			name = CyclingTimerUITests;
+			productName = CyclingTimerUITests;
+			productReference = C7075E1825BF22AE000B611C /* CyclingTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C7075E2025BF22AE000B611C /* CyclingTimer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7075E4925BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer WatchKit App" */;
+			buildPhases = (
+				C7075E1F25BF22AE000B611C /* Resources */,
+				C7075E4825BF22AF000B611C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7075E3025BF22AF000B611C /* PBXTargetDependency */,
+			);
+			name = "CyclingTimer WatchKit App";
+			productName = "CyclingTimer WatchKit App";
+			productReference = C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C7075E2C25BF22AF000B611C /* CyclingTimer WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7075E4525BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer WatchKit Extension" */;
+			buildPhases = (
+				C7075E2925BF22AF000B611C /* Sources */,
+				C7075E2A25BF22AF000B611C /* Frameworks */,
+				C7075E2B25BF22AF000B611C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CyclingTimer WatchKit Extension";
+			productName = "CyclingTimer WatchKit Extension";
+			productReference = C7075E2D25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7075DF425BF22AD000B611C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					C7075DFB25BF22AD000B611C = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C7075E0C25BF22AE000B611C = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = C7075DFB25BF22AD000B611C;
+					};
+					C7075E1725BF22AE000B611C = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = C7075DFB25BF22AD000B611C;
+					};
+					C7075E2025BF22AE000B611C = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C7075E2C25BF22AF000B611C = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = C7075DF725BF22AD000B611C /* Build configuration list for PBXProject "CyclingTimer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7075DF325BF22AD000B611C;
+			productRefGroup = C7075DFD25BF22AD000B611C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7075DFB25BF22AD000B611C /* CyclingTimer */,
+				C7075E0C25BF22AE000B611C /* CyclingTimerTests */,
+				C7075E1725BF22AE000B611C /* CyclingTimerUITests */,
+				C7075E2025BF22AE000B611C /* CyclingTimer WatchKit App */,
+				C7075E2C25BF22AF000B611C /* CyclingTimer WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7075DFA25BF22AD000B611C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E0725BF22AE000B611C /* Preview Assets.xcassets in Resources */,
+				C7075E0425BF22AE000B611C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E0B25BF22AE000B611C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E1625BF22AE000B611C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E1F25BF22AE000B611C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E2725BF22AF000B611C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E2B25BF22AF000B611C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E4025BF22AF000B611C /* Preview Assets.xcassets in Resources */,
+				C7075E3D25BF22AF000B611C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7075DF825BF22AD000B611C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E0225BF22AD000B611C /* ContentView.swift in Sources */,
+				C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E0925BF22AE000B611C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E1225BF22AE000B611C /* CyclingTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E1425BF22AE000B611C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E1D25BF22AE000B611C /* CyclingTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7075E2925BF22AF000B611C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7075E3725BF22AF000B611C /* NotificationController.swift in Sources */,
+				C7075E3525BF22AF000B611C /* ContentView.swift in Sources */,
+				C7075E3B25BF22AF000B611C /* ComplicationController.swift in Sources */,
+				C7075E3325BF22AF000B611C /* CyclingTimerApp.swift in Sources */,
+				C7075E3925BF22AF000B611C /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7075E0F25BF22AE000B611C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7075DFB25BF22AD000B611C /* CyclingTimer */;
+			targetProxy = C7075E0E25BF22AE000B611C /* PBXContainerItemProxy */;
+		};
+		C7075E1A25BF22AE000B611C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7075DFB25BF22AD000B611C /* CyclingTimer */;
+			targetProxy = C7075E1925BF22AE000B611C /* PBXContainerItemProxy */;
+		};
+		C7075E2425BF22AE000B611C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7075E2025BF22AE000B611C /* CyclingTimer WatchKit App */;
+			targetProxy = C7075E2325BF22AE000B611C /* PBXContainerItemProxy */;
+		};
+		C7075E3025BF22AF000B611C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7075E2C25BF22AF000B611C /* CyclingTimer WatchKit Extension */;
+			targetProxy = C7075E2F25BF22AF000B611C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C7075E4325BF22AF000B611C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7075E4425BF22AF000B611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C7075E4625BF22AF000B611C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CyclingTimer WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CyclingTimer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		C7075E4725BF22AF000B611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CyclingTimer WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CyclingTimer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		C7075E4A25BF22AF000B611C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = CyclingTimer_WatchKit_Extension;
+				INFOPLIST_FILE = "CyclingTimer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		C7075E4B25BF22AF000B611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = CyclingTimer_WatchKit_Extension;
+				INFOPLIST_FILE = "CyclingTimer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		C7075E4E25BF22AF000B611C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CyclingTimer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CyclingTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7075E4F25BF22AF000B611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CyclingTimer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CyclingTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7075E5125BF22AF000B611C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyclingTimerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyclingTimer.app/CyclingTimer";
+			};
+			name = Debug;
+		};
+		C7075E5225BF22AF000B611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyclingTimerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyclingTimer.app/CyclingTimer";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7075E5425BF22AF000B611C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyclingTimerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CyclingTimer;
+			};
+			name = Debug;
+		};
+		C7075E5525BF22AF000B611C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CyclingTimerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CyclingTimer;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7075DF725BF22AD000B611C /* Build configuration list for PBXProject "CyclingTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7075E4325BF22AF000B611C /* Debug */,
+				C7075E4425BF22AF000B611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7075E4525BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7075E4625BF22AF000B611C /* Debug */,
+				C7075E4725BF22AF000B611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7075E4925BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7075E4A25BF22AF000B611C /* Debug */,
+				C7075E4B25BF22AF000B611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7075E4D25BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7075E4E25BF22AF000B611C /* Debug */,
+				C7075E4F25BF22AF000B611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7075E5025BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7075E5125BF22AF000B611C /* Debug */,
+				C7075E5225BF22AF000B611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7075E5325BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7075E5425BF22AF000B611C /* Debug */,
+				C7075E5525BF22AF000B611C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7075DF425BF22AD000B611C /* Project object */;
+}
