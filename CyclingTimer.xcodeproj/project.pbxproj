@@ -23,6 +23,10 @@
 		C7075E3B25BF22AF000B611C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E3A25BF22AF000B611C /* ComplicationController.swift */; };
 		C7075E3D25BF22AF000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3C25BF22AF000B611C /* Assets.xcassets */; };
 		C7075E4025BF22AF000B611C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */; };
+		C74321C125C06C4F00D73735 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321C025C06C4F00D73735 /* Timer.swift */; };
+		C74321C825C06D6600D73735 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321C725C06D6600D73735 /* Set.swift */; };
+		C74321CF25C06D6D00D73735 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321CE25C06D6D00D73735 /* Segment.swift */; };
+		C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321D525C075B300D73735 /* Collection+Sum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +111,10 @@
 		C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7075E4125BF22AF000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7075E4225BF22AF000B611C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C74321C025C06C4F00D73735 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		C74321C725C06D6600D73735 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		C74321CE25C06D6D00D73735 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		C74321D525C075B300D73735 /* Collection+Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sum.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,10 @@
 			children = (
 				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
 				C7075E0125BF22AD000B611C /* ContentView.swift */,
+				C74321C025C06C4F00D73735 /* Timer.swift */,
+				C74321C725C06D6600D73735 /* Set.swift */,
+				C74321CE25C06D6D00D73735 /* Segment.swift */,
+				C74321D525C075B300D73735 /* Collection+Sum.swift */,
 				C7075E0325BF22AE000B611C /* Assets.xcassets */,
 				C7075E0825BF22AE000B611C /* Info.plist */,
 				C7075E0525BF22AE000B611C /* Preview Content */,
@@ -426,6 +438,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74321C825C06D6600D73735 /* Set.swift in Sources */,
+				C74321CF25C06D6D00D73735 /* Segment.swift in Sources */,
+				C74321C125C06C4F00D73735 /* Timer.swift in Sources */,
+				C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */,
 				C7075E0225BF22AD000B611C /* ContentView.swift in Sources */,
 				C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */,
 			);
