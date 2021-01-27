@@ -12,15 +12,19 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(timers) { timer in
-                VStack(alignment: .leading) {
-                    Text(timer.name)
-                    Text(timer.durationLabel)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
+            List {
+                ForEach(timers) { timer in
+                    TimerCell(timer: timer)
+                }
+                HStack {
+                    Spacer()
+                    Text("\(timers.count) Timers")
+                        .foregroundColor(.secondary)
+                        .font(.subheadline)
+                    Spacer()
                 }
             }
+            .navigationTitle("Timers")
         }
     }
 }
@@ -28,5 +32,21 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(timers: testData)
+    }
+}
+
+struct TimerCell: View {
+    var timer: Timer
+    
+    var body: some View {
+        NavigationLink(destination: Text(timer.name)) {
+            VStack(alignment: .leading) {
+                Text(timer.name)
+                Text(timer.durationLabel)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+            }
+        }
     }
 }
