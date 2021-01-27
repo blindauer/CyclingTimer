@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var timers: [Timer] = []
+    
     var body: some View {
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            VStack(alignment: .leading) {
-                Text("Morning workout")
-                Text("25 min")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.blue)
+        NavigationView {
+            List(timers) { timer in
+                VStack(alignment: .leading) {
+                    Text(timer.name)
+                    Text(timer.durationLabel)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(.blue)
+                }
             }
         }
     }
@@ -23,6 +27,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(timers: testData)
     }
 }

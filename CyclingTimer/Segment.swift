@@ -18,6 +18,11 @@ struct Segment {
     var repetitions = 0
     var type: SegmentType
     var duration: TimeInterval {
-        return sets.sum({ $0.duration })
+        let segmentDuration = sets.sum({ $0.duration })
+        if repetitions == 0 {
+            return segmentDuration
+        } else {
+            return segmentDuration * Double(repetitions)
+        }
     }
 }
