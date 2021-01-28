@@ -24,7 +24,7 @@
 		C7075E3D25BF22AF000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3C25BF22AF000B611C /* Assets.xcassets */; };
 		C7075E4025BF22AF000B611C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */; };
 		C727CB6E25C2080F0079FD6A /* TimerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727CB6D25C2080F0079FD6A /* TimerDetail.swift */; };
-		C727CB7525C20B990079FD6A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727CB7425C20B990079FD6A /* ProgressBar.swift */; };
+		C727CB7525C20B990079FD6A /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727CB7425C20B990079FD6A /* TimerProgressView.swift */; };
 		C74321C125C06C4F00D73735 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321C025C06C4F00D73735 /* Timer.swift */; };
 		C74321C825C06D6600D73735 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321C725C06D6600D73735 /* Set.swift */; };
 		C74321CF25C06D6D00D73735 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321CE25C06D6D00D73735 /* Segment.swift */; };
@@ -114,7 +114,7 @@
 		C7075E4125BF22AF000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7075E4225BF22AF000B611C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		C727CB6D25C2080F0079FD6A /* TimerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetail.swift; sourceTree = "<group>"; };
-		C727CB7425C20B990079FD6A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		C727CB7425C20B990079FD6A /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
 		C74321C025C06C4F00D73735 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C74321C725C06D6600D73735 /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		C74321CE25C06D6D00D73735 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
 				C7075E0125BF22AD000B611C /* ContentView.swift */,
 				C727CB6D25C2080F0079FD6A /* TimerDetail.swift */,
-				C727CB7425C20B990079FD6A /* ProgressBar.swift */,
+				C727CB7425C20B990079FD6A /* TimerProgressView.swift */,
 				C74321C025C06C4F00D73735 /* Timer.swift */,
 				C74321C725C06D6600D73735 /* Set.swift */,
 				C74321CE25C06D6D00D73735 /* Segment.swift */,
@@ -447,7 +447,7 @@
 				C74321C825C06D6600D73735 /* Set.swift in Sources */,
 				C74321CF25C06D6D00D73735 /* Segment.swift in Sources */,
 				C74321C125C06C4F00D73735 /* Timer.swift in Sources */,
-				C727CB7525C20B990079FD6A /* ProgressBar.swift in Sources */,
+				C727CB7525C20B990079FD6A /* TimerProgressView.swift in Sources */,
 				C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */,
 				C7075E0225BF22AD000B611C /* ContentView.swift in Sources */,
 				C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */,
