@@ -1,5 +1,5 @@
 //
-//  TimerProgressView.swift
+//  ProgressBar.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-01-27.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimerProgressView: View {
+struct ProgressBar: View {
     @Binding var progress: Float
     var set: Set
     
