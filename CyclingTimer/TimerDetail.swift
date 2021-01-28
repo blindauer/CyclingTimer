@@ -14,7 +14,6 @@ struct TimerDetail: View {
     var body: some View {
         ZStack {
             ProgressView(progress: $progressValue, set: timer.segments[0].sets[0])
-                .frame(width: 150.0, height: 150.0)
                 .padding(40.0)
             Spacer()
         }

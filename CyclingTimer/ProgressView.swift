@@ -28,11 +28,16 @@ struct ProgressView: View {
             
             VStack {
                 Text("1:07")
+                    .font(.largeTitle)
+                    .bold()
                 Rectangle()
                     .frame(height: 2.0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .padding(0)
                 Text("\(set.rpm) RPM")
+                    .font(.largeTitle)
+                    .bold()
             }
-            .padding(40.0)
+            .padding(50)
         }
     }
 }
