@@ -29,6 +29,7 @@
 		C74321CF25C06D6D00D73735 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321CE25C06D6D00D73735 /* Segment.swift */; };
 		C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321D525C075B300D73735 /* Collection+Sum.swift */; };
 		C7A135D925C31311009B1EE3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A135D825C31311009B1EE3 /* ProgressView.swift */; };
+		C7A1360F25C46C09009B1EE3 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1360E25C46C09009B1EE3 /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		C74321CE25C06D6D00D73735 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		C74321D525C075B300D73735 /* Collection+Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sum.swift"; sourceTree = "<group>"; };
 		C7A135D825C31311009B1EE3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		C7A1360E25C46C09009B1EE3 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
 				C7A1360025C45B30009B1EE3 /* Views */,
 				C7A135F325C45AB6009B1EE3 /* Models */,
+				C7A1360D25C46B6B009B1EE3 /* ViewModels */,
 				C7A135F925C45ACE009B1EE3 /* Extensions */,
 				C7075E0325BF22AE000B611C /* Assets.xcassets */,
 				C7075E0825BF22AE000B611C /* Info.plist */,
@@ -276,6 +279,14 @@
 				C7A135D825C31311009B1EE3 /* ProgressView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C7A1360D25C46B6B009B1EE3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C7A1360E25C46C09009B1EE3 /* TimerViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74321C825C06D6600D73735 /* Set.swift in Sources */,
+				C7A1360F25C46C09009B1EE3 /* TimerViewModel.swift in Sources */,
 				C74321CF25C06D6D00D73735 /* Segment.swift in Sources */,
 				C74321C125C06C4F00D73735 /* Session.swift in Sources */,
 				C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */,

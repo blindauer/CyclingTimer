@@ -15,7 +15,7 @@ struct SessionDetail: View {
     var body: some View {
         ZStack {
             VStack {
-                ProgressView(progress: $progressValue, set: session.segments[0].sets[0])
+                ProgressView(progress: $progressValue)
                     .padding(40.0)
                 Button(action: incrementProgress) {
                     Image(systemName: "play.fill")

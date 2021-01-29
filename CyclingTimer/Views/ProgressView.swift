@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProgressView: View {
     @Binding var progress: Float
-    var set: Set
-    
     
     var body: some View {
         ZStack {
@@ -27,13 +25,13 @@ struct ProgressView: View {
                 .animation(.linear)
             
             VStack {
-                Text("1:07")
+                Text("1:07") //Placeholder
                     .font(.largeTitle)
                     .bold()
                 Rectangle()
                     .frame(height: 2.0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .padding(0)
-                Text("\(set.rpm) RPM")
+                Text("75 RPM") //Placeholder
                     .font(.largeTitle)
                     .bold()
             }
