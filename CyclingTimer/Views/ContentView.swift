@@ -14,7 +14,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(sessions) { session in
-                    TimerCell(timer: session)
+                    SessionCell(session: session)
                 }
                 HStack {
                     Spacer()
@@ -35,14 +35,14 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct TimerCell: View {
-    var timer: Session
+struct SessionCell: View {
+    var session: Session
     
     var body: some View {
-        NavigationLink(destination: Text(timer.name)) {
+        NavigationLink(destination: Text(session.name)) {
             VStack(alignment: .leading) {
-                Text(timer.name)
-                Text(timer.durationLabel)
+                Text(session.name)
+                Text(session.durationLabel)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.blue)

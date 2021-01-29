@@ -1,5 +1,5 @@
 //
-//  TimerDetail.swift
+//  SessionDetail.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-01-27.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct TimerDetail: View {
-    var timer: Session
+struct SessionDetail: View {
+    var session: Session
     @State var progressValue = Float.zero
     @State private var playing = false
     
     var body: some View {
         ZStack {
             VStack {
-                ProgressView(progress: $progressValue, set: timer.segments[0].sets[0])
+                ProgressView(progress: $progressValue, set: session.segments[0].sets[0])
                     .padding(40.0)
                 Button(action: incrementProgress) {
                     Image(systemName: "play.fill")
@@ -29,7 +29,7 @@ struct TimerDetail: View {
             }
             Spacer()
         }
-        .navigationTitle(timer.name)
+        .navigationTitle(session.name)
     }
     
     func incrementProgress() {
@@ -38,10 +38,10 @@ struct TimerDetail: View {
     }
 }
 
-struct TimerDetail_Previews: PreviewProvider {
+struct SessionDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TimerDetail(timer: testData[0])
+            SessionDetail(session: testData[0])
         }
     }
 }
