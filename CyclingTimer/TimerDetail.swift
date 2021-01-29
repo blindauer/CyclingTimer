@@ -10,19 +10,38 @@ import SwiftUI
 struct TimerDetail: View {
     var timer: Timer
     @State var progressValue = Float.zero
+    @State private var playing = false
     
     var body: some View {
         ZStack {
-            ProgressView(progress: $progressValue, set: timer.segments[0].sets[0])
-                .padding(40.0)
+            VStack {
+                ProgressView(progress: $progressValue, set: timer.segments[0].sets[0])
+                    .padding(40.0)
+                Button(action: incrementProgress) {
+                    Image(systemName: "play.fill")
+                    .padding(15.0)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15.0)
+                            .stroke(lineWidth: 2.0)
+                    )
+                }
+                Spacer()
+            }
             Spacer()
         }
-
+        .navigationTitle(timer.name)
+    }
+    
+    func incrementProgress() {
+        let randomValue = Float([0.012, 0.022, 0.034, 0.016, 0.11].randomElement()!)
+        self.progressValue += randomValue
     }
 }
 
 struct TimerDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TimerDetail(timer: testData[0])
+        NavigationView {
+            TimerDetail(timer: testData[0])
+        }
     }
 }
