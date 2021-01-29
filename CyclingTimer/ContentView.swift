@@ -8,35 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    var timers: [Timer] = []
+    var sessions: [Session] = []
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(timers) { timer in
-                    TimerCell(timer: timer)
+                ForEach(sessions) { session in
+                    TimerCell(timer: session)
                 }
                 HStack {
                     Spacer()
-                    Text("\(timers.count) Timers")
+                    Text("\(sessions.count) sessions")
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                     Spacer()
                 }
             }
-            .navigationTitle("Timers")
+            .navigationTitle("Sessions")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(timers: testData)
+        ContentView(sessions: testData)
     }
 }
 
 struct TimerCell: View {
-    var timer: Timer
+    var timer: Session
     
     var body: some View {
         NavigationLink(destination: Text(timer.name)) {

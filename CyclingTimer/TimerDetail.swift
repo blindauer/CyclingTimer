@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TimerDetail: View {
-    var timer: Timer
+    var timer: Session
     @State var progressValue = Float.zero
     @State private var playing = false
     

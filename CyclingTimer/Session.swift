@@ -1,5 +1,5 @@
 //
-//  Timer.swift
+//  Session.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-01-26.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Timer: Identifiable {
-    var id = UUID() // TODO: DO I NEED THIS?
+struct Session: Identifiable {
+    var id = UUID()
     var name: String
     var segments: [Segment]
     var duration: TimeInterval {
@@ -22,7 +22,7 @@ struct Timer: Identifiable {
 
 let testData = [
         
-    Timer(name: "Morning Workout", segments: [
+    Session(name: "Morning Session", segments: [
         Segment(sets: [Set(description: "Warmup", duration: 120, rpm: 75, effort: 4)], type: .warmup),
         
         Segment(sets: [Set(description: "Torque", duration: 60, rpm: 60, effort: 9),
@@ -30,7 +30,7 @@ let testData = [
                        Set(description: "Recovery", duration: 120, rpm: 85, effort: 3)], repetitions: 5, type: .work)
     ]),
     
-    Timer(name: "HIIT Workout", segments: [
+    Session(name: "HIIT Session", segments: [
         Segment(sets: [Set(description: "Warmup", duration: 180, rpm: 70, effort: 4),
                        Set(description: "Warmup", duration: 120, rpm: 80, effort: 7),
                        Set(description: "Warmup", duration: 60, rpm: 90, effort: 8),
@@ -42,7 +42,7 @@ let testData = [
         Segment(sets: [Set(description: "Cooldown", duration: 180, rpm: 75, effort: 4)], type: .cooldown)
     ]),
     
-    Timer(name: "Forty twenties", segments: [
+    Session(name: "Forty twenties", segments: [
         Segment(sets: [Set(description: "Warmup", duration: 60, rpm: 100, effort: 7),
                        Set(description: "Warmup", duration: 60, rpm: 90, effort: 4)], type: .warmup),
         
