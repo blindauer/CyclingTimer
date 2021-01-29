@@ -22,7 +22,7 @@ struct Session: Identifiable {
 
 let testData = [
         
-    Session(name: "Morning Session", segments: [
+    Session(name: "Morning Workout", segments: [
         Segment(sets: [Set(description: "Warmup", duration: 120, rpm: 75, effort: 4)], type: .warmup),
         
         Segment(sets: [Set(description: "Torque", duration: 60, rpm: 60, effort: 9),
@@ -30,7 +30,7 @@ let testData = [
                        Set(description: "Recovery", duration: 120, rpm: 85, effort: 3)], repetitions: 5, type: .work)
     ]),
     
-    Session(name: "HIIT Session", segments: [
+    Session(name: "HIIT Workout", segments: [
         Segment(sets: [Set(description: "Warmup", duration: 180, rpm: 70, effort: 4),
                        Set(description: "Warmup", duration: 120, rpm: 80, effort: 7),
                        Set(description: "Warmup", duration: 60, rpm: 90, effort: 8),

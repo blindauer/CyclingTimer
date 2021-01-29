@@ -181,13 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
-				C7075E0125BF22AD000B611C /* ContentView.swift */,
-				C727CB6D25C2080F0079FD6A /* TimerDetail.swift */,
-				C7A135D825C31311009B1EE3 /* ProgressView.swift */,
-				C74321C025C06C4F00D73735 /* Session.swift */,
-				C74321C725C06D6600D73735 /* Set.swift */,
-				C74321CE25C06D6D00D73735 /* Segment.swift */,
-				C74321D525C075B300D73735 /* Collection+Sum.swift */,
+				C7A1360025C45B30009B1EE3 /* Views */,
+				C7A135F325C45AB6009B1EE3 /* Models */,
+				C7A135F925C45ACE009B1EE3 /* Extensions */,
 				C7075E0325BF22AE000B611C /* Assets.xcassets */,
 				C7075E0825BF22AE000B611C /* Info.plist */,
 				C7075E0525BF22AE000B611C /* Preview Content */,
@@ -252,6 +248,34 @@
 				C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7A135F325C45AB6009B1EE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C74321C025C06C4F00D73735 /* Session.swift */,
+				C74321C725C06D6600D73735 /* Set.swift */,
+				C74321CE25C06D6D00D73735 /* Segment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7A135F925C45ACE009B1EE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C74321D525C075B300D73735 /* Collection+Sum.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C7A1360025C45B30009B1EE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7075E0125BF22AD000B611C /* ContentView.swift */,
+				C727CB6D25C2080F0079FD6A /* TimerDetail.swift */,
+				C7A135D825C31311009B1EE3 /* ProgressView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
