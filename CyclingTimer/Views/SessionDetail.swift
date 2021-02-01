@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SessionDetail: View {
     var session: Session
+    var setViewModel: SetViewModel
     @State var progressValue = Float.zero
     @State private var playing = false
     
@@ -17,7 +18,7 @@ struct SessionDetail: View {
             VStack {
                 ProgressView(progress: $progressValue)
                     .padding(40.0)
-                Button(action: incrementProgress) {
+                Button(action: play) {
                     Image(systemName: "play.fill")
                     .padding(15.0)
                     .overlay(
@@ -32,16 +33,17 @@ struct SessionDetail: View {
         .navigationTitle(session.name)
     }
     
-    func incrementProgress() {
-        let randomValue = Float([0.012, 0.022, 0.034, 0.016, 0.11].randomElement()!)
-        self.progressValue += randomValue
+    func play() {
+        //setViewModel.play()
+        //self.progressValue += randomValue
     }
 }
 
 struct SessionDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SessionDetail(session: testData[0])
+            let testSet = Set(description: "TestSet", duration: 30, rpm: 75, effort: 4)
+            SessionDetail(session: testData[0], setViewModel: SetViewModel(set: testSet))
         }
     }
 }

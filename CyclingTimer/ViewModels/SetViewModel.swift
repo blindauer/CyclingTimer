@@ -8,23 +8,14 @@
 import Foundation
 
 struct SetViewModel {
-    private var timeRemaining: TimeInterval
-    private var timer: Timer
+    private var set: Set
     
     init(set: Set) {
-        self.timeRemaining = set.duration
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            //fireTimer(timer: timer)
-            print("fire")
-        }
+        self.set = set
     }
     
-    mutating func fireTimer(timer: Timer) {
-        timeRemaining -= 1
-        print("Time remaining is \(timeRemaining)")
-        if timeRemaining <= 0 {
-            timer.invalidate()
-            print("end")
-        }
+    func start() {
+        
     }
+
 }
