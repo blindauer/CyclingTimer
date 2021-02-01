@@ -29,7 +29,7 @@
 		C74321CF25C06D6D00D73735 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321CE25C06D6D00D73735 /* Segment.swift */; };
 		C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321D525C075B300D73735 /* Collection+Sum.swift */; };
 		C7A135D925C31311009B1EE3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A135D825C31311009B1EE3 /* ProgressView.swift */; };
-		C7A1360F25C46C09009B1EE3 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1360E25C46C09009B1EE3 /* TimerViewModel.swift */; };
+		C7A1360F25C46C09009B1EE3 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1360E25C46C09009B1EE3 /* SetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +120,7 @@
 		C74321CE25C06D6D00D73735 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		C74321D525C075B300D73735 /* Collection+Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sum.swift"; sourceTree = "<group>"; };
 		C7A135D825C31311009B1EE3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		C7A1360E25C46C09009B1EE3 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		C7A1360E25C46C09009B1EE3 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,7 +284,7 @@
 		C7A1360D25C46B6B009B1EE3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C7A1360E25C46C09009B1EE3 /* TimerViewModel.swift */,
+				C7A1360E25C46C09009B1EE3 /* SetViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -480,7 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74321C825C06D6600D73735 /* Set.swift in Sources */,
-				C7A1360F25C46C09009B1EE3 /* TimerViewModel.swift in Sources */,
+				C7A1360F25C46C09009B1EE3 /* SetViewModel.swift in Sources */,
 				C74321CF25C06D6D00D73735 /* Segment.swift in Sources */,
 				C74321C125C06C4F00D73735 /* Session.swift in Sources */,
 				C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */,
