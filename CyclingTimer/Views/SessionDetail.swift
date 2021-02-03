@@ -34,8 +34,8 @@ struct SessionDetail: View {
     }
     
     func play() {
-        //setViewModel.play()
-        //self.progressValue += randomValue
+        setViewModel.play()
+        self.progressValue += 0.1
     }
 }
 

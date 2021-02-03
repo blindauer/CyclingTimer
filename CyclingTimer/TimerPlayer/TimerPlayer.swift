@@ -7,22 +7,28 @@
 
 import Foundation
 
+enum TimerState {
+    case notStarted
+    case paused
+    case finished
+}
+
 class TimerPlayer {
     private var timer: Timer?
     private var timeRemaining: TimeInterval
-    private var completion: () -> Void
+    private var completion: (TimerState, TimeInterval) -> Void
     
-    required init(duration: TimeInterval, completion: @escaping () -> Void) {
+    required init(duration: TimeInterval, completion: @escaping (TimerState, TimeInterval) -> Void) {
         self.timeRemaining = duration
         self.completion = completion
     }
     
-    func start() {
+    func play() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [unowned self] timer in
             print("fire")
             timeRemaining -= 1
             if timeRemaining <= 0 {
-                self.completion()
+                self.completion(.finished, timeRemaining)
             }
         }
     }

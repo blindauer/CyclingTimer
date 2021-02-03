@@ -31,6 +31,10 @@
 		C773717925C852F300951411 /* TimerPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773717825C852F300951411 /* TimerPlayer.swift */; };
 		C7A135D925C31311009B1EE3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A135D825C31311009B1EE3 /* ProgressView.swift */; };
 		C7A1360F25C46C09009B1EE3 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A1360E25C46C09009B1EE3 /* SetViewModel.swift */; };
+		C7D4755B25C9A7F200B223CD /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4755A25C9A7F200B223CD /* SessionStore.swift */; };
+		C7D4759225CAFDAC00B223CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7D4759425CAFDAC00B223CD /* InfoPlist.strings */; };
+		C7D4759A25CAFDB300B223CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7D4759C25CAFDB300B223CD /* Localizable.strings */; };
+		C7D475A225CAFDC300B223CD /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C7D475A425CAFDC300B223CD /* Localizable.stringsdict */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +127,10 @@
 		C773717825C852F300951411 /* TimerPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlayer.swift; sourceTree = "<group>"; };
 		C7A135D825C31311009B1EE3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		C7A1360E25C46C09009B1EE3 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
+		C7D4755A25C9A7F200B223CD /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		C7D4759325CAFDAC00B223CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7D4759B25CAFDB300B223CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C7D475A325CAFDC300B223CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
+				C7D4756D25CAFAF100B223CD /* Localization */,
 				C7A1360025C45B30009B1EE3 /* Views */,
 				C7A135F325C45AB6009B1EE3 /* Models */,
 				C7A1360D25C46B6B009B1EE3 /* ViewModels */,
@@ -267,6 +276,7 @@
 		C7A135F325C45AB6009B1EE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C7D4755A25C9A7F200B223CD /* SessionStore.swift */,
 				C74321C025C06C4F00D73735 /* Session.swift */,
 				C74321CE25C06D6D00D73735 /* Segment.swift */,
 				C74321C725C06D6600D73735 /* Set.swift */,
@@ -298,6 +308,16 @@
 				C7A1360E25C46C09009B1EE3 /* SetViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C7D4756D25CAFAF100B223CD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4759425CAFDAC00B223CD /* InfoPlist.strings */,
+				C7D4759C25CAFDB300B223CD /* Localizable.strings */,
+				C7D475A425CAFDC300B223CD /* Localizable.stringsdict */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,7 +467,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D4759A25CAFDB300B223CD /* Localizable.strings in Resources */,
 				C7075E0725BF22AE000B611C /* Preview Assets.xcassets in Resources */,
+				C7D4759225CAFDAC00B223CD /* InfoPlist.strings in Resources */,
+				C7D475A225CAFDC300B223CD /* Localizable.stringsdict in Resources */,
 				C7075E0425BF22AE000B611C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +522,7 @@
 				C7075E0225BF22AD000B611C /* ContentView.swift in Sources */,
 				C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */,
 				C727CB6E25C2080F0079FD6A /* SessionDetail.swift in Sources */,
+				C7D4755B25C9A7F200B223CD /* SessionStore.swift in Sources */,
 				C7A135D925C31311009B1EE3 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +579,33 @@
 			targetProxy = C7075E2F25BF22AF000B611C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7D4759425CAFDAC00B223CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7D4759325CAFDAC00B223CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C7D4759C25CAFDB300B223CD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7D4759B25CAFDB300B223CD /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C7D475A425CAFDC300B223CD /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7D475A325CAFDC300B223CD /* en */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C7075E4325BF22AF000B611C /* Debug */ = {

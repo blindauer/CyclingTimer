@@ -8,14 +8,29 @@
 import Foundation
 
 struct SetViewModel {
-    private var set: Set
+    private var timerPlayer: TimerPlayer
     
     init(set: Set) {
-        self.set = set
-    }
-    
-    func start() {
+        self.timerPlayer = TimerPlayer(duration: set.duration, completion: { (timerState, timeRemaining) in
+            switch timerState {
+            case .notStarted:
+                print("not started")
+            case .paused:
+                print("paused")
+            case .finished:
+                print("finished")
+            }
+        })
         
     }
+    
+    func play() {
+        timerPlayer.play()
+    }
+    
+    func pause() {
+        timerPlayer.pause()
+    }
+    
 
 }
