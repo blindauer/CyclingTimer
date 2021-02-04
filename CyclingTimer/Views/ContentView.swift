@@ -62,6 +62,7 @@ struct ContentView_Previews: PreviewProvider {
             ContentView(store: testStore)
             ContentView(store: testStore)
                 .preferredColorScheme(.dark)
+                .environment(\.locale, Locale(identifier: "ru"))
         }
     }
 }
