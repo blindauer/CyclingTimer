@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CyclingTimerApp: App {
-    @StateObject private var store = SessionStore()
+    @StateObject private var store = testStore
     
     var body: some Scene {
         WindowGroup {

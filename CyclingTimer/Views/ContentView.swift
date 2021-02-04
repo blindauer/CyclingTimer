@@ -30,7 +30,7 @@ struct ContentView: View {
             .navigationTitle("Sessions")
             .toolbar {
                 EditButton()
-                Button("New", action: newSession)
+                Button("New", action: newSession) // TODO: why is this not appearing?
             }
         }
     }
