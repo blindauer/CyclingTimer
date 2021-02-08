@@ -22,7 +22,7 @@ struct SessionDetail: View {
                     Image(systemName: "play.fill")
                     .padding(15.0)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 15.0)
+                        Circle()
                             .stroke(lineWidth: 2.0)
                     )
                 }
