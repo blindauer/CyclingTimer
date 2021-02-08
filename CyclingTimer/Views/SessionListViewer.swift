@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SessionListViewer.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-01-25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SessionListViewer: View {
     @ObservedObject var store: SessionStore
     
     var body: some View {
@@ -29,8 +29,11 @@ struct ContentView: View {
             }
             .navigationTitle("Sessions")
             .toolbar {
-                EditButton()
-                Button("New", action: newSession) // TODO: why is this not appearing?
+                HStack {
+                    Button("New", action: newSession)
+                    Spacer()
+                    EditButton()
+                }
             }
         }
     }
@@ -59,8 +62,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(store: testStore)
-            ContentView(store: testStore)
+            SessionListViewer(store: testStore)
+            SessionListViewer(store: testStore)
                 .preferredColorScheme(.dark)
                 .environment(\.locale, Locale(identifier: "ru"))
         }
