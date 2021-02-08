@@ -1,9 +1,6 @@
 /* Navigation title for a view showing a lost of sessions */
 "Sessions" = "Тренировка";
 
-/* Row showing the number of sessions in a list */
-"%@ Sessions" = "%@ Тренировок"; //TODO - currently does not work
-
 /* Button that lets the user create a new session */
 "New" = "Создать";
 

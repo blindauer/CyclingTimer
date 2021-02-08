@@ -18,20 +18,13 @@ struct SessionListViewer: View {
                 }
                 .onMove(perform: moveSession)
                 .onDelete(perform: deleteSession)
-                
-                HStack {
-                    Spacer()
-                    Text("\(store.sessions.count) sessions")
-                        .foregroundColor(.secondary)
-                        .font(.subheadline)
-                    Spacer()
-                }
             }
             .navigationTitle("Sessions")
-            .toolbar {
+            .toolbar { // TODO: Needs better design
                 HStack {
-                    Button("New", action: newSession)
-                    Spacer()
+                    Button(action: newSession) {
+                        Label("New", systemImage: "plus.circle")
+                    }
                     EditButton()
                 }
             }
