@@ -38,6 +38,7 @@
 		C7EA3D1325CC4DCB00BEBFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7EA3D1525CC4DCB00BEBFF8 /* InfoPlist.strings */; };
 		C7EA3D1B25CC4DD100BEBFF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7EA3D1D25CC4DD100BEBFF8 /* Localizable.strings */; };
 		C7EA3D2325CC4DD600BEBFF8 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C7EA3D2525CC4DD600BEBFF8 /* Localizable.stringsdict */; };
+		C7EE17ED25D18198006B3607 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EE17EC25D18198006B3607 /* SessionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		C7EA3D1425CC4DCB00BEBFF8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7EA3D1C25CC4DD100BEBFF8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C7EA3D2425CC4DD600BEBFF8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		C7EE17EC25D18198006B3607 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				C7075E0125BF22AD000B611C /* ContentView.swift */,
+				C7EE17F325D181A1006B3607 /* Cells */,
 				C727CB6D25C2080F0079FD6A /* SessionDetail.swift */,
 				C7A135D825C31311009B1EE3 /* ProgressView.swift */,
 			);
@@ -343,6 +346,14 @@
 				C7912FC725CC4C090089A736 /* en */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		C7EE17F325D181A1006B3607 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7EE17EC25D18198006B3607 /* SessionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +561,7 @@
 				C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */,
 				C7075E0225BF22AD000B611C /* ContentView.swift in Sources */,
 				C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */,
+				C7EE17ED25D18198006B3607 /* SessionCell.swift in Sources */,
 				C727CB6E25C2080F0079FD6A /* SessionDetail.swift in Sources */,
 				C7D4755B25C9A7F200B223CD /* SessionStore.swift in Sources */,
 				C7A135D925C31311009B1EE3 /* ProgressView.swift in Sources */,

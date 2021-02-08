@@ -66,19 +66,3 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
-
-struct SessionCell: View {
-    var session: Session
-    
-    var body: some View {
-        NavigationLink(destination: Text(session.name)) {
-            VStack(alignment: .leading) {
-                Text(session.name)
-                Text(session.durationLabel)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.blue)
-            }
-        }
-    }
-}
