@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SessionListViewer: View {
-    @ObservedObject var store: SessionStore
+    @EnvironmentObject var store: SessionStore
     
     var body: some View {
         NavigationView {
@@ -57,10 +57,12 @@ struct SessionListViewer: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SessionListViewer(store: testStore)
-            SessionListViewer(store: testStore)
+            SessionListViewer()
+                .environmentObject(testStore)
+                /*
                 .preferredColorScheme(.dark)
                 .environment(\.locale, Locale(identifier: "ru"))
+                */
         }
     }
 }

@@ -13,7 +13,8 @@ struct CyclingTimerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SessionListViewer(store: store)
+            SessionListViewer()
+                .environmentObject(store)
         }
     }
 }

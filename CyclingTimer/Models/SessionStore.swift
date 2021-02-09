@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SessionStore: ObservableObject {
+final class SessionStore: ObservableObject {
     
     @Published var sessions: [Session]
     
