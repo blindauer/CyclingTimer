@@ -20,6 +20,8 @@ let testStore = SessionStore(sessions: testData)
 
 let testData = [
     
+    Session(name: "Testing", segments: [Segment(sets: [Set(description: "Test", duration: 5, rpm: 75, effort: 4)], type: .work)]),
+    
     Session(name: "Morning Workout", segments: [
         Segment(sets: [Set(description: "Warmup", duration: 120, rpm: 75, effort: 4)], type: .warmup),
         

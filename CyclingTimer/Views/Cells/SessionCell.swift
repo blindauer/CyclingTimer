@@ -12,11 +12,8 @@ struct SessionCell: View {
     var session: Session
     
     var body: some View {
-        let set = session.segments[0].sets[0] // TODO: if session is resuming keep track of progress, otherwise start from the beggining
-        let setViewModel = SetViewModel(set: set)
-        let sessionDetail = SessionDetail(session: session, setViewModel: setViewModel)
         
-        NavigationLink(destination: sessionDetail) {
+        NavigationLink(destination: SessionDetail(session: session)) {
             VStack(alignment: .leading) {
                 Text(session.name)
                 Text(session.durationLabel)
@@ -25,5 +22,15 @@ struct SessionCell: View {
                     .foregroundColor(.blue)
             }
         }
+    }
+}
+
+struct SessionCell_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            SessionCell(session: testStore.sessions[0])
+            SessionCell(session: testStore.sessions[1])
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }

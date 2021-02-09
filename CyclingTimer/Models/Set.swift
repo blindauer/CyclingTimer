@@ -9,7 +9,7 @@ import Foundation
 
 struct Set {
     var description: String
-    var duration: TimeInterval
+    var duration: Float
     var rpm: Int
     var effort: Int
 }

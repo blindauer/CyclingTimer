@@ -11,7 +11,7 @@ struct Session: Identifiable {
     var id = UUID()
     var name: String
     var segments: [Segment]
-    var duration: TimeInterval {
+    var duration: Float {
         return segments.sum({ $0.duration })
     }
     var durationLabel: String {
