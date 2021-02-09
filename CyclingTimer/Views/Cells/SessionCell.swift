@@ -12,15 +12,12 @@ struct SessionCell: View {
     var session: Session
     
     var body: some View {
-        
-        NavigationLink(destination: SessionDetail(session: session)) {
-            VStack(alignment: .leading) {
-                Text(session.name)
-                Text(session.durationLabel)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.blue)
-            }
+        VStack(alignment: .leading) {
+            Text(session.name)
+            Text(session.durationLabel)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.blue)
         }
     }
 }

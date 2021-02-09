@@ -14,7 +14,9 @@ struct SessionListViewer: View {
         NavigationView {
             List {
                 ForEach(store.sessions) { session in
-                    SessionCell(session: session)
+                    NavigationLink(destination: SessionDetail(session: session)) {
+                        SessionCell(session: session)
+                    }
                 }
                 .onMove(perform: moveSession)
                 .onDelete(perform: deleteSession)
