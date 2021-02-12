@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct TimerView: View {
+    
     var body: some View {
         VStack {
             ClockView()
+            Spacer()
             ZStack {
-                CircularBarView()
+                Counter()
                 TimerButtonView()
+                //CircularBarView()
             }
+            Spacer()
         }
     }
 }

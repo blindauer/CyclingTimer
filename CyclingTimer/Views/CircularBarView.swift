@@ -13,17 +13,17 @@ struct CircularBarView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(lineWidth: 30.0)
+                .stroke(lineWidth: 60.0)
                 .opacity(0.3)
-                .foregroundColor(.blue)
+                .foregroundColor(.green)
             Circle()
                 .trim(from: 0.0, to: CGFloat(timerManager.progress))
-                .stroke(style: StrokeStyle(lineWidth: 30.0, lineCap: .round, lineJoin: .round))
-                .foregroundColor(.blue)
+                .stroke(style: StrokeStyle(lineWidth: 60.0, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.green)
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.easeInOut)
         }
-        .padding(30.0)
+        .padding(40.0)
     }
 }
 

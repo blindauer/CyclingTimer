@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 func secondsToMinutesAndSeconds(seconds: Int) -> String {
     let minutes = "\((seconds % 3600) / 60)"
     let seconds = "\((seconds % 3600) % 60)"

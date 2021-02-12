@@ -35,6 +35,8 @@
 		C7D4755B25C9A7F200B223CD /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4755A25C9A7F200B223CD /* SessionStore.swift */; };
 		C7DC066525D471B1002B6220 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC066425D471B1002B6220 /* TimerView.swift */; };
 		C7DC066C25D47205002B6220 /* CircularBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC066B25D47205002B6220 /* CircularBarView.swift */; };
+		C7DC067825D578E4002B6220 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC067725D578E4002B6220 /* Counter.swift */; };
+		C7DC068C25D586DE002B6220 /* RotatedRoundedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DC068B25D586DE002B6220 /* RotatedRoundedRect.swift */; };
 		C7EA3CFB25CC4DBC00BEBFF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7EA3CFD25CC4DBC00BEBFF8 /* InfoPlist.strings */; };
 		C7EA3D0325CC4DC000BEBFF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7EA3D0525CC4DC000BEBFF8 /* Localizable.strings */; };
 		C7EA3D0B25CC4DC500BEBFF8 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C7EA3D0D25CC4DC500BEBFF8 /* Localizable.stringsdict */; };
@@ -138,6 +140,8 @@
 		C7D4755A25C9A7F200B223CD /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		C7DC066425D471B1002B6220 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C7DC066B25D47205002B6220 /* CircularBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBarView.swift; sourceTree = "<group>"; };
+		C7DC067725D578E4002B6220 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		C7DC068B25D586DE002B6220 /* RotatedRoundedRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedRoundedRect.swift; sourceTree = "<group>"; };
 		C7EA3CFC25CC4DBC00BEBFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7EA3D0425CC4DC000BEBFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C7EA3D0C25CC4DC500BEBFF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -328,6 +332,8 @@
 				C70F7D5625D469670040B5E5 /* ClockView.swift */,
 				C70F7D5D25D46A520040B5E5 /* TimerButtonView.swift */,
 				C7DC066B25D47205002B6220 /* CircularBarView.swift */,
+				C7DC067725D578E4002B6220 /* Counter.swift */,
+				C7DC068B25D586DE002B6220 /* RotatedRoundedRect.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				C7DC066525D471B1002B6220 /* TimerView.swift in Sources */,
 				C70F7D5725D469670040B5E5 /* ClockView.swift in Sources */,
 				C74321C825C06D6600D73735 /* Set.swift in Sources */,
+				C7DC068C25D586DE002B6220 /* RotatedRoundedRect.swift in Sources */,
 				C70F7D3325D45B8B0040B5E5 /* Helper.swift in Sources */,
 				C7DC066C25D47205002B6220 /* CircularBarView.swift in Sources */,
 				C70F7D5E25D46A520040B5E5 /* TimerButtonView.swift in Sources */,
@@ -548,6 +555,7 @@
 				C74321C125C06C4F00D73735 /* Session.swift in Sources */,
 				C74321D625C075B300D73735 /* Collection+Sum.swift in Sources */,
 				C70F7D2B25D45ADF0040B5E5 /* TimerManager.swift in Sources */,
+				C7DC067825D578E4002B6220 /* Counter.swift in Sources */,
 				C7075E0225BF22AD000B611C /* SessionListViewer.swift in Sources */,
 				C7075E0025BF22AD000B611C /* CyclingTimerApp.swift in Sources */,
 				C7EE17ED25D18198006B3607 /* SessionRow.swift in Sources */,
