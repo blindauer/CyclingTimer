@@ -14,9 +14,8 @@ struct TimerView: View {
             ClockView()
             Spacer()
             ZStack {
-                Counter()
                 TimerButtonView()
-                //CircularBarView()
+                CircularBarView()
             }
             Spacer()
         }

@@ -28,7 +28,7 @@ class TimerManager: ObservableObject {
     func start() {
         timerMode = .running
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
-            if self.timeRemaining == 0 {
+            if self.timeRemaining <= 0 {
                 self.reset()
             }
             self.timeElapsed += 0.1
