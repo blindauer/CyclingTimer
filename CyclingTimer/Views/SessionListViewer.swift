@@ -14,7 +14,7 @@ struct SessionListViewer: View {
         NavigationView {
             List {
                 ForEach(store.sessions) { session in
-                    NavigationLink(destination: SessionDetail(session: session)) {
+                    NavigationLink(destination: SessionView(session: session)) {
                         SessionRow(session: session)
                     }
                 }

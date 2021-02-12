@@ -1,5 +1,5 @@
 //
-//  CircularBarView.swift
+//  LineTimer.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-02-10.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircularBarView: View {
+struct LineTimer: View {
     @ObservedObject var timerManager = TimerManager.shared
     
     var body: some View {
@@ -29,7 +29,7 @@ struct CircularBarView: View {
 
 struct CircularBarView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularBarView()
+        LineTimer()
             .previewLayout(.fixed(width: 400, height: 400))
     }
 }

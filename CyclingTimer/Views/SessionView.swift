@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SessionDetail: View {
+struct SessionView: View {
     
     private var session: Session
     
@@ -17,14 +17,20 @@ struct SessionDetail: View {
     
     
     var body: some View {
-        TimerView()
+        Clock()
+        Spacer()
+        ZStack {
+            PlayPauseButton()
+            LineTimer()
+        }
+        Spacer()
     }
 }
 
 struct SessionDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SessionDetail(session: testStore.sessions[0])
+            SessionView(session: testStore.sessions[0])
         }
     }
 }

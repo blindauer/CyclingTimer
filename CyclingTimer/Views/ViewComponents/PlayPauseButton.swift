@@ -1,5 +1,5 @@
 //
-//  TimerButtonView.swift
+//  PlayPauseButton.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-02-10.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimerButtonView: View {
+struct PlayPauseButton: View {
     @ObservedObject var timerManager = TimerManager.shared
     
     var body: some View {
@@ -28,7 +28,7 @@ struct TimerButtonView: View {
 
 struct TimerButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerButtonView()
+        PlayPauseButton()
             .previewLayout(.fixed(width: 180, height: 180))
     }
 }

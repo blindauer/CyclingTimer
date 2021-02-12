@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Counter: View {
+struct TickTimer: View {
     @ObservedObject var timerManager = TimerManager.shared
     static let rotationCount = 100
     
     var rotatedRoundedRects: some View {
-        ForEach(0..<Counter.rotationCount) { index in
-            let angle = Angle.degrees(Double(index) / Double(Counter.rotationCount)) * 360.0
+        ForEach(0..<TickTimer.rotationCount) { index in
+            let angle = Angle.degrees(Double(index) / Double(TickTimer.rotationCount)) * 360.0
             
             RotatedRoundedRect(angle: angle,
                                radius: 150.0,
@@ -31,6 +31,6 @@ struct Counter: View {
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        Counter()
+        TickTimer()
     }
 }
