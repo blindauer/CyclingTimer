@@ -1,5 +1,5 @@
 //
-//  Counter.swift
+//  TickTimer.swift
 //  CyclingTimer
 //
 //  Created by Maria Civilis on 2021-02-11.
