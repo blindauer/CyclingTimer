@@ -19,7 +19,7 @@ class TimerManager: ObservableObject {
     static var shared = TimerManager()
 
     @Published var timerMode: TimerMode = .initial
-    @Published var timeRemaining = 60 // FIX ME
+    @Published var timeRemaining = Float(30) // FIX ME
     @Published var progress: Float = .zero
     
     private var timeElapsed: Float = .zero
@@ -27,19 +27,19 @@ class TimerManager: ObservableObject {
     
     func start() {
         timerMode = .running
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
             if self.timeRemaining == 0 {
                 self.reset()
             }
-            self.timeElapsed += 1
-            self.timeRemaining -= 1
-            self.progress = Float(self.timeElapsed) / 60.0  // FIX ME
+            self.timeElapsed += 0.1
+            self.timeRemaining -= 0.1
+            self.progress = Float(self.timeElapsed) / 30  // FIX ME
         })
     }
     
     func reset() {
         timerMode = .initial
-        timeRemaining = 60 // FIX ME
+        timeRemaining = 30 // FIX ME
         progress = 0
         timer.invalidate()
     }

@@ -11,7 +11,7 @@ struct ClockView: View {
     @ObservedObject var timerManager = TimerManager.shared
     
     var body: some View {
-        Text(secondsToMinutesAndSeconds(seconds: timerManager.timeRemaining))
+        Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.timeRemaining)))
             .font(.system(size: 80))
     }
 }
