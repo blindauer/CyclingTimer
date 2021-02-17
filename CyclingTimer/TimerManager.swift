@@ -32,9 +32,6 @@ class TimerManager: ObservableObject {
     private var timeElapsed: Double = .zero
     private var session: Session
     
-    private var duration: Double { return session.segments[segmentIndex].sets[setIndex].duration }
-    private var setFinished: Bool { return Int(timeElapsed) >= Int(duration)}
-    
     init(session: Session) {
         self.session = session
         self.timeStamp = TimerManager.timeStamp(time: session.segments[segmentIndex].sets[setIndex].duration)
@@ -43,12 +40,7 @@ class TimerManager: ObservableObject {
     func start() {
         timerMode = .running
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
-            if !self.setFinished {
-                print("Time elapsed is \(Int(self.timeElapsed)), duration is \(Int(self.duration)) and setFinished = \(self.setFinished)")
-                self.updateProgress()
-            } else {
-                self.nextSetOrFinish()
-            }
+            self.timerFired()
         })
     }
     
@@ -58,6 +50,7 @@ class TimerManager: ObservableObject {
     }
     
     private func updateProgress() {
+        let duration = session.segments[segmentIndex].sets[setIndex].duration
         timeElapsed += 0.1
         timeStamp = TimerManager.timeStamp(time: duration - timeElapsed)
         progress = timeElapsed / duration
@@ -74,7 +67,16 @@ class TimerManager: ObservableObject {
         // Full reset
         segmentIndex = 0
         setIndex = 0
-        timeStamp = TimerManager.timeStamp(time: duration - timeElapsed)
+        let time = session.segments[segmentIndex].sets[setIndex].duration - timeElapsed
+        timeStamp = TimerManager.timeStamp(time: time)
+    }
+    
+    private func timerFired() {
+        if Int(timeElapsed) < Int(session.segments[segmentIndex].sets[setIndex].duration) {
+            updateProgress()
+        } else {
+            nextSetOrFinish()
+        }
     }
     
     private func nextSetOrFinish() {
