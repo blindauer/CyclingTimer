@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TickTimer: View {
-    @ObservedObject var timerManager = TimerManager.shared
+    @ObservedObject var timerManager: TimerManager
     static let rotationCount = 100
     
     var rotatedRoundedRects: some View {
@@ -31,6 +31,6 @@ struct TickTimer: View {
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        TickTimer()
+        TickTimer(timerManager: TimerManager(session: testData[0]))
     }
 }

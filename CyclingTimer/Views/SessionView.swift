@@ -9,28 +9,28 @@ import SwiftUI
 
 struct SessionView: View {
     
-    private var session: Session
+    private var timerManager: TimerManager
     
     init(session: Session) {
-        self.session = session
+        self.timerManager = TimerManager(session: session)
     }
     
     
     var body: some View {
-        Clock()
-        Spacer()
-        ZStack {
-            PlayPauseButton()
-            LineTimer()
+        VStack {
+            Clock(timerManager: timerManager)
+            Spacer()
+            ZStack {
+                PlayPauseButton(timerManager: timerManager)
+                LineTimer(timerManager: timerManager)
+            }
+            Spacer()
         }
-        Spacer()
     }
 }
 
 struct SessionDetail_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            SessionView(session: testStore.sessions[0])
-        }
+        SessionView(session: testStore.sessions[0])
     }
 }

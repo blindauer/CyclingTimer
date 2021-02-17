@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LineTimer: View {
-    @ObservedObject var timerManager = TimerManager.shared
+    @ObservedObject var timerManager: TimerManager
     
     var body: some View {
         ZStack {
@@ -29,7 +29,7 @@ struct LineTimer: View {
 
 struct CircularBarView_Previews: PreviewProvider {
     static var previews: some View {
-        LineTimer()
+        LineTimer(timerManager: TimerManager(session: testData[0]))
             .previewLayout(.fixed(width: 400, height: 400))
     }
 }

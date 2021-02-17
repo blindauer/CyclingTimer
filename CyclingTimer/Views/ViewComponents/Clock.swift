@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct Clock: View {
-    @ObservedObject var timerManager = TimerManager.shared
+    @ObservedObject var timerManager: TimerManager
     
     var body: some View {
-        Text(secondsToMinutesAndSeconds(seconds: Int(timerManager.timeRemaining)))
+        Text(timerManager.timeStamp)
             .font(.system(size: 80))
     }
 }
 
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
-        Clock()
-            .previewLayout(.fixed(width: 300, height: 100))
+        Clock(timerManager: TimerManager(session: testData[0]))
+            .previewLayout(.fixed(width: 400, height: 100))
     }
 }

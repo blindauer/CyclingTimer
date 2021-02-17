@@ -24,7 +24,6 @@
 		C7075E3D25BF22AF000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3C25BF22AF000B611C /* Assets.xcassets */; };
 		C7075E4025BF22AF000B611C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E3F25BF22AF000B611C /* Preview Assets.xcassets */; };
 		C70F7D2B25D45ADF0040B5E5 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70F7D2A25D45ADF0040B5E5 /* TimerManager.swift */; };
-		C70F7D3325D45B8B0040B5E5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70F7D3225D45B8B0040B5E5 /* Helper.swift */; };
 		C70F7D5725D469670040B5E5 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70F7D5625D469670040B5E5 /* Clock.swift */; };
 		C70F7D5E25D46A520040B5E5 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70F7D5D25D46A520040B5E5 /* PlayPauseButton.swift */; };
 		C727CB6E25C2080F0079FD6A /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C727CB6D25C2080F0079FD6A /* SessionView.swift */; };
@@ -128,7 +127,6 @@
 		C7075E4125BF22AF000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7075E4225BF22AF000B611C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		C70F7D2A25D45ADF0040B5E5 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
-		C70F7D3225D45B8B0040B5E5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C70F7D5625D469670040B5E5 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		C70F7D5D25D46A520040B5E5 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		C727CB6D25C2080F0079FD6A /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 				C7075DFF25BF22AD000B611C /* CyclingTimerApp.swift */,
 				C7D4756D25CAFAF100B223CD /* Localization */,
 				C7A1360025C45B30009B1EE3 /* Views */,
-				C70F7D3225D45B8B0040B5E5 /* Helper.swift */,
 				C70F7D2A25D45ADF0040B5E5 /* TimerManager.swift */,
 				C7A135F325C45AB6009B1EE3 /* Models */,
 				C7A135F925C45ACE009B1EE3 /* Extensions */,
@@ -560,7 +557,6 @@
 				C70F7D5725D469670040B5E5 /* Clock.swift in Sources */,
 				C74321C825C06D6600D73735 /* Set.swift in Sources */,
 				C7DC068C25D586DE002B6220 /* RotatedRoundedRect.swift in Sources */,
-				C70F7D3325D45B8B0040B5E5 /* Helper.swift in Sources */,
 				C7DC066C25D47205002B6220 /* LineTimer.swift in Sources */,
 				C70F7D5E25D46A520040B5E5 /* PlayPauseButton.swift in Sources */,
 				C74321CF25C06D6D00D73735 /* Segment.swift in Sources */,

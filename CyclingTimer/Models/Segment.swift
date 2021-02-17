@@ -17,12 +17,12 @@ struct Segment {
     var sets: [Set]
     var repetitions = 0
     var type: SegmentType
-    var duration: Float {
+    var duration: Double {
         let segmentDuration = sets.sum({ $0.duration })
         if repetitions == 0 {
             return segmentDuration
         } else {
-            return segmentDuration * Float(repetitions)
+            return segmentDuration * Double(repetitions)
         }
     }
 }

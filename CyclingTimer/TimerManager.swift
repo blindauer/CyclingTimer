@@ -14,39 +14,94 @@ enum TimerMode {
     case paused
 }
 
+enum ResetMode {
+    case set
+    case session
+}
+
 class TimerManager: ObservableObject {
-    
-    static var shared = TimerManager()
 
     @Published var timerMode: TimerMode = .initial
-    @Published var timeRemaining = Float(30) // FIX ME
-    @Published var progress: Float = .zero
+    @Published var timeStamp: String
+    @Published var progress: Double = .zero
     
-    private var timeElapsed: Float = .zero
+    private var segmentIndex: Int = 0
+    private var setIndex: Int = 0
+    
     private var timer = Timer()
+    private var timeElapsed: Double = .zero
+    private var session: Session
+    
+    private var duration: Double { return session.segments[segmentIndex].sets[setIndex].duration }
+    private var setFinished: Bool { return Int(timeElapsed) >= Int(duration)}
+    
+    init(session: Session) {
+        self.session = session
+        self.timeStamp = TimerManager.timeStamp(time: session.segments[segmentIndex].sets[setIndex].duration)
+    }
     
     func start() {
         timerMode = .running
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
-            if self.timeRemaining <= 0 {
-                self.reset()
+            if !self.setFinished {
+                print("Time elapsed is \(Int(self.timeElapsed)), duration is \(Int(self.duration)) and setFinished = \(self.setFinished)")
+                self.updateProgress()
+            } else {
+                self.nextSetOrFinish()
             }
-            self.timeElapsed += 0.1
-            self.timeRemaining -= 0.1
-            self.progress = Float(self.timeElapsed) / 30  // FIX ME
         })
-    }
-    
-    func reset() {
-        timerMode = .initial
-        timeRemaining = 30 // FIX ME
-        progress = 0
-        timer.invalidate()
     }
     
     func pause() {
         timerMode = .paused
         timer.invalidate()
+    }
+    
+    private func updateProgress() {
+        timeElapsed += 0.1
+        timeStamp = TimerManager.timeStamp(time: duration - timeElapsed)
+        progress = timeElapsed / duration
+    }
+    
+    private func reset(resetMode: ResetMode) {
+        timerMode = .initial
+        progress = 0
+        timeElapsed = 0
+        timer.invalidate()
+        if resetMode == .set {
+            return
+        }
+        // Full reset
+        segmentIndex = 0
+        setIndex = 0
+        timeStamp = TimerManager.timeStamp(time: duration - timeElapsed)
+    }
+    
+    private func nextSetOrFinish() {
+        let lastSegment = session.segments.count - 1
+        let lastSet = session.segments[segmentIndex].sets.count - 1
+        
+        if setIndex == lastSet && segmentIndex == lastSegment {
+            reset(resetMode: .session)
+            return
+        }
+        reset(resetMode: .set)
+        if setIndex == lastSet  {
+            setIndex = 0
+            segmentIndex += 1
+        } else {
+            setIndex += 1
+        }
+        start()
+    }
+    
+    static func timeStamp(time: Double) -> String {
+        let timeInSeconds = Int(time)
+        let minutes = "\((timeInSeconds % 3600) / 60)"
+        let seconds = "\((timeInSeconds % 3600) % 60)"
+        let minuteStamp = minutes.count > 1 ? minutes : "0" + minutes
+        let secondStamp = seconds.count > 1 ? seconds : "0" + seconds
+        return "\(minuteStamp) : \(secondStamp)"
     }
 }
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayPauseButton: View {
-    @ObservedObject var timerManager = TimerManager.shared
+    @ObservedObject var timerManager: TimerManager
     
     var body: some View {
         Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
@@ -28,7 +28,7 @@ struct PlayPauseButton: View {
 
 struct TimerButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayPauseButton()
+        PlayPauseButton(timerManager: TimerManager(session: testData[0]))
             .previewLayout(.fixed(width: 180, height: 180))
     }
 }
