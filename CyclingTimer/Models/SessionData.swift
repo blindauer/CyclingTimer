@@ -33,11 +33,11 @@ class SessionData: ObservableObject {
                 #endif
                 return
             }
-            guard let dailySessions = try? JSONDecoder().decode([Session].self, from: data) else {
+            guard let sessions = try? JSONDecoder().decode([Session].self, from: data) else {
                 fatalError("Can't decode saved session data.")
             }
             DispatchQueue.main.async {
-                self?.sessions = dailySessions
+                self?.sessions = sessions
             }
         }
     }

@@ -14,10 +14,8 @@ struct Effort {
 
 struct EffortPicker: View {
     
-    //@Binding var pickerValue: Int
-    
     var body: some View {
-        Text("TODO")
+        Text("")
     }
 }
 

@@ -25,12 +25,15 @@ struct NewSessionView: View {
             Section {
                 TextField("Session name", text: $sessionData.name)
                     .font(.largeTitle)
-                //ColorPicker("Color", selection: $sessionData.color)
+                ColorPicker("Color", selection: $sessionData.color)
             }
             ForEach(sessionData.segments) { segmentData in
                 Section {
                     ForEach(sessionData.segments[index(for: segmentData)].sets) { setData in
                         SetView(set: Set.getSet(from: setData))
+                    }
+                    .onDelete { indices in
+                        sessionData.segments[index(for: segmentData)].sets.remove(atOffsets: indices)
                     }
                     plusButton
                     .sheet(isPresented: $isPresented) {

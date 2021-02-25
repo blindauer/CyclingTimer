@@ -31,8 +31,7 @@ struct SessionDetailView: View {
             ForEach(0..<session.segments.count) { segmentIndex in
                 Section (footer: Text("# repeats \(session.segments[segmentIndex].repetitions)")) {
                     ForEach(0..<session.segments[segmentIndex].sets.count) { setIndex in
-                        Text("TODO: Set view")
-                        //SetView(setData: Set.getData(from: session.segments[segmentIndex].sets[setIndex]))
+                        SetView(set: session.segments[segmentIndex].sets[setIndex])
                     }
                 }
             }
