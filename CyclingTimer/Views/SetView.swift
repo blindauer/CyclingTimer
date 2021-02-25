@@ -15,21 +15,19 @@ struct SetView: View {
             HStack {
                 Text(set.description)
                 Spacer()
-                Image(systemName: "stopwatch.fill")
+                Label(TimerManager.timeStamp(time: set.duration), systemImage: "stopwatch.fill")
                     .foregroundColor(set.color)
-                    .font(.title2)
-                Text(TimerManager.timeStamp(time: set.duration))
             }
             HStack {
+                HStack(spacing: 0) {
+                    HorizontalEffortView(effort: set.effort)
+                }
+                Spacer()
                 HStack(spacing: 0) {
                     Text("\(set.rpm)")
                         .font(.title2)
                     Text("RPM")
                         .font(.subheadline)
-                }
-                Spacer()
-                HStack(spacing: 0) {
-                    HorizontalEffortView(effort: set.effort)
                 }
             }
         }
