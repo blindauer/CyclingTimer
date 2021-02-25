@@ -11,14 +11,16 @@ struct Clock: View {
     @ObservedObject var timerManager: TimerManager
     
     var body: some View {
-        Text(timerManager.timeStamp)
-            .font(.system(size: 80))
+        VStack {
+            Text(timerManager.timeStamp)
+                .font(.system(size: 80))
+        }
     }
 }
 
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
-        Clock(timerManager: TimerManager(session: testData[0]))
+        Clock(timerManager: TimerManager(session: Session.data[0]))
             .previewLayout(.fixed(width: 400, height: 100))
     }
 }

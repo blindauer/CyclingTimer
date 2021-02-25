@@ -1,36 +1,33 @@
 //
-//  SessionDetail.swift
+//  SessionView.swift
 //  CyclingTimer
 //
-//  Created by Maria Civilis on 2021-01-27.
+//  Created by Maria Civilis on 2021-02-08.
 //
 
+import Foundation
 import SwiftUI
 
 struct SessionView: View {
-    
-    private var timerManager: TimerManager
-    
-    init(session: Session) {
-        self.timerManager = TimerManager(session: session)
-    }
-    
+    let session: Session
     
     var body: some View {
-        VStack {
-            Clock(timerManager: timerManager)
-            Spacer()
-            ZStack {
-                PlayPauseButton(timerManager: timerManager)
-                LineTimer(timerManager: timerManager)
-            }
-            Spacer()
+        VStack(alignment: .leading) {
+            Text(session.name)
+            Text(session.durationLabel)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.blue)
         }
     }
 }
 
-struct SessionDetail_Previews: PreviewProvider {
+struct SessionView_Previews: PreviewProvider {
+    static var session = Session.data[0]
     static var previews: some View {
-        SessionView(session: testStore.sessions[0])
+        Group {
+            SessionView(session: session)
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }

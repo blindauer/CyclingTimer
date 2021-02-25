@@ -14,14 +14,14 @@ struct LineTimer: View {
         Circle()
             .stroke(lineWidth: 40.0)
             .opacity(0.3)
-            .foregroundColor(.green)
+            .foregroundColor(.accentColor)
     }
     
     var progressCircle: some View {
         Circle()
             .trim(from: 0.0, to: CGFloat(timerManager.progress))
             .stroke(style: StrokeStyle(lineWidth: 40.0, lineCap: .round, lineJoin: .round))
-            .foregroundColor(.green)
+            .foregroundColor(.accentColor)
             .rotationEffect(Angle(degrees: 270.0))
             .animation(timerManager.animation ? .linear : .none)
     }
@@ -37,7 +37,7 @@ struct LineTimer: View {
 
 struct CircularBarView_Previews: PreviewProvider {
     static var previews: some View {
-        LineTimer(timerManager: TimerManager(session: testData[0]))
+        LineTimer(timerManager: TimerManager(session: Session.data[0]))
             .previewLayout(.fixed(width: 400, height: 400))
     }
 }

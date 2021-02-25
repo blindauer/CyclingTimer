@@ -15,7 +15,7 @@ struct PlayPauseButton: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 150, height: 150)
-            .foregroundColor(.green)
+            .foregroundColor(.accentColor)
             .onTapGesture {
                 if timerManager.timerMode == .running {
                     timerManager.pause()
@@ -28,7 +28,7 @@ struct PlayPauseButton: View {
 
 struct TimerButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayPauseButton(timerManager: TimerManager(session: testData[0]))
+        PlayPauseButton(timerManager: TimerManager(session: Session.data[0]))
             .previewLayout(.fixed(width: 180, height: 180))
     }
 }

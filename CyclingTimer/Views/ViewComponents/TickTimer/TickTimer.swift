@@ -31,6 +31,6 @@ struct TickTimer: View {
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        TickTimer(timerManager: TimerManager(session: testData[0]))
+        TickTimer(timerManager: TimerManager(session: Session.data[0]))
     }
 }

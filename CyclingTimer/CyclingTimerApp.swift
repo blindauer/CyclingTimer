@@ -9,12 +9,17 @@ import SwiftUI
 
 @main
 struct CyclingTimerApp: App {
-    @StateObject var store = testStore
-    
+    @ObservedObject private var data = SessionData()
     var body: some Scene {
         WindowGroup {
-            SessionListViewer()
-                .environmentObject(store)
+            NavigationView {
+                SessionListView(sessions: $data.sessions) {
+                    data.save()
+                }
+            }
+            .onAppear {
+                data.load()
+            }
         }
     }
 }
