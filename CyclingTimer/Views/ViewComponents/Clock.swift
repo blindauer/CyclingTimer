@@ -20,7 +20,7 @@ struct Clock: View {
 
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
-        Clock(timerManager: TimerManager(session: Session.data[0]))
+        Clock(timerManager: TimerManager())
             .previewLayout(.fixed(width: 400, height: 100))
     }
 }

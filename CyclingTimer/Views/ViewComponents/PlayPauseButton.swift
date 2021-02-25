@@ -11,13 +11,13 @@ struct PlayPauseButton: View {
     @ObservedObject var timerManager: TimerManager
     
     var body: some View {
-        Image(systemName: timerManager.timerMode == .running ? "pause.circle.fill" : "play.circle.fill")
+        Image(systemName: timerManager.timerState == .running ? "pause.circle.fill" : "play.circle.fill")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 150, height: 150)
             .foregroundColor(.accentColor)
             .onTapGesture {
-                if timerManager.timerMode == .running {
+                if timerManager.timerState == .running {
                     timerManager.pause()
                 } else {
                     timerManager.start()
@@ -28,7 +28,7 @@ struct PlayPauseButton: View {
 
 struct TimerButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayPauseButton(timerManager: TimerManager(session: Session.data[0]))
+        PlayPauseButton(timerManager: TimerManager())
             .previewLayout(.fixed(width: 180, height: 180))
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum TimerMode {
+enum TimerState {
     case initial
     case running
     case paused
@@ -20,59 +20,37 @@ enum UpdateMode {
 }
 /// Keeps time for a session sets and supplies time conversions
 class TimerManager: ObservableObject {
-    
-    @Published var timerMode: TimerMode = .initial
-    @Published var timeStamp: String
+    /// Indicates current timer state
+    @Published var timerState: TimerState = .initial
+    /// Indicates the timer progress on the current set
     @Published var progress: Double = .zero
+    /// Used to indicate to parent whether progress changes should be animated (i.e. when switching to new set animation is disabled)
     @Published var animation: Bool = true
+    /// Primary time stamp used to show a clock as each set is running
+    @Published var timeStamp: String = TimerManager.timeStamp(time: 0.0)
+    /// Time stamp  used to show total session elapsed time
     @Published var elapsedTimeStamp: String = TimerManager.timeStamp(time: 0.0)
-    @Published var remainingTimeStamp: String
-    /// A closure that is executed when a new set begins.
-    var setChangedAction: (() -> Void)? // FIX ME: not sure I am going to use this yet
+    /// Time stamp  used to show total session remaining time
+    @Published var remainingTimeStamp: String = TimerManager.timeStamp(time: 0.0)
+
     private var segmentIndex: Int = 0
     private var setIndex: Int = 0
     private var timer = Timer()
     private var timeElapsed: Double = .zero
-    private var session: Session
+    private var session: Session?
     private var totalTimeElapsed: Double = .zero
-    private var totalTimeRemaining: Double
+    private var totalTimeRemaining: Double  = .zero
+   
+    /// A closure that is executed when a new set begins.
+    var setChangedAction: (() -> Void)? // FIX ME: not sure I am going to use this yet
     
     /**
-     Initialize a new timer.  Initializing a timer with no sesion creates a timer with with empty session that has no sets and zero duration.
-     Use `start()` to start the timer.
-     
-     - Parameters:
-        - session: The session that the time will run set by set.
-     */
-    init(session: Session = Session()) {
-        self.session = session
-        self.totalTimeRemaining = session.duration
-        self.remainingTimeStamp = TimerManager.timeStamp(time: session.duration)
-        self.timeStamp = TimerManager.timeStamp(time: session.segments[segmentIndex].sets[setIndex].duration)
-    }
-    
-    /// Start the timer.
-    func start() {
-        timerMode = .running
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
-            self.timerFired()
-        })
-    }
-    
-    /// Pause the timer.
-    func pause() {
-        timerMode = .paused
-        timer.invalidate()
-    }
-    
-    /**
-     Reset the timer with a new session.
-     
+     Initializes timer  with a new session.
      - Parameters:
          - session: Session to run.
      */
-    func reset(session newSession: Session) {
-        timerMode = .initial
+    func initialize(with newSession: Session) {
+        timerState = .initial
         progress = .zero
         animation = true
         elapsedTimeStamp = TimerManager.timeStamp(time: 0.0)
@@ -82,12 +60,28 @@ class TimerManager: ObservableObject {
         timeElapsed = .zero
         totalTimeElapsed = .zero
         session = newSession
-        totalTimeRemaining = session.duration
-        remainingTimeStamp = TimerManager.timeStamp(time: session.duration)
-        timeStamp = TimerManager.timeStamp(time: session.segments[segmentIndex].sets[setIndex].duration)
+        totalTimeRemaining = newSession.duration
+        remainingTimeStamp = TimerManager.timeStamp(time: newSession.duration)
+        timeStamp = TimerManager.timeStamp(time: newSession.segments[segmentIndex].sets[setIndex].duration)
+    }
+    
+    func start() {
+        timerState = .running
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
+            self.timerFired()
+        })
+    }
+    
+    /// Pause the timer.
+    func pause() {
+        timerState = .paused
+        timer.invalidate()
     }
     
     private func timerFired() {
+        guard let session = session else {
+            fatalError("Session has not been set")
+        }
         if Int(timeElapsed) < Int(session.segments[segmentIndex].sets[setIndex].duration) {
             updateProgress()
         } else {
@@ -96,6 +90,9 @@ class TimerManager: ObservableObject {
     }
     
     private func updateProgress() {
+        guard let session = session else {
+            fatalError("Session has not been set")
+        }
         animation = true
         let duration = session.segments[segmentIndex].sets[setIndex].duration
         timeElapsed += 0.1
@@ -108,6 +105,9 @@ class TimerManager: ObservableObject {
     }
     
     private func nextSetOrFinish() {
+        guard let session = session else {
+            fatalError("Session has not been set")
+        }
         animation = false
         let lastSegment = session.segments.count - 1
         let lastSet = session.segments[segmentIndex].sets.count - 1
@@ -127,7 +127,10 @@ class TimerManager: ObservableObject {
     }
     
     private func updateTimer(updateMode: UpdateMode) {
-        timerMode = .initial
+        guard let session = session else {
+            fatalError("Session has not been set")
+        }
+        timerState = .initial
         progress = 0
         timeElapsed = 0
         timer.invalidate()

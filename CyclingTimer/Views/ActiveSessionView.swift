@@ -28,7 +28,7 @@ struct ActiveSessionView: View {
             }
         }
         .onAppear {
-            timerManager.reset(session: session)
+            timerManager.initialize(with: session)
             timerManager.start()
         }
         .onDisappear {

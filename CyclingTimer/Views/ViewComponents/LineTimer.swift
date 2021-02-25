@@ -37,7 +37,7 @@ struct LineTimer: View {
 
 struct CircularBarView_Previews: PreviewProvider {
     static var previews: some View {
-        LineTimer(timerManager: TimerManager(session: Session.data[0]))
+        LineTimer(timerManager: TimerManager())
             .previewLayout(.fixed(width: 400, height: 400))
     }
 }
