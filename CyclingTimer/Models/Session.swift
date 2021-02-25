@@ -11,7 +11,6 @@ struct Session: Codable, Identifiable {
     let id: UUID
     var name: String
     var segments: [Segment]
-    var color: Color
     var duration: Double {
         return segments.sum({ $0.duration })
     }
@@ -20,11 +19,10 @@ struct Session: Codable, Identifiable {
         return "\(minutes) min"
     }
     
-    init(id: UUID = UUID(), name: String = "", segments: [Segment] = [Segment()], color: Color = .clear) {
+    init(id: UUID = UUID(), name: String = "", segments: [Segment] = [Segment()]) {
         self.id = id
         self.name = name
         self.segments = segments
-        self.color = color
     }
 }
 
@@ -33,22 +31,21 @@ extension Session {
         let id: UUID = UUID()
         var name: String = ""
         var segments: [Segment.Data] = [Segment.Data()]
-        var color: Color = .clear
     }
     
     var data: Data {
         let segmentsData = segments.map { Segment.getData(from: $0) }
-        return Data(name: name, segments: segmentsData, color: color)
+        return Data(name: name, segments: segmentsData)
     }
     
     static func getData(from session: Session) -> Session.Data {
         let segmentsData = session.segments.map { Segment.getData(from: $0) }
-        return Data(name: session.name, segments: segmentsData, color: session.color)
+        return Data(name: session.name, segments: segmentsData)
     }
     
     static func getSession(from data: Session.Data) -> Session {
         let segments = data.segments.map { Segment.getSegment(from: $0) }
-        return Session(name: data.name, segments: segments, color: data.color)
+        return Session(name: data.name, segments: segments)
     }
 
 //    func set(with segmentIndex: Int, setIndex: Int) -> Set {

@@ -10,32 +10,35 @@ import SwiftUI
 struct AddSet: View {
     @Binding var setData: Set.Data
 
-    let effort = Array(1...10)
-    let allPossibleRPM = Array(arrayLiteral: 45, 50, 55, 60, 65, 70, 75, 80, 90, 65, 100, 105, 110, 115, 120, 125, 130, 135, 140)
-    
-    var rpmPicker: some View {
-        Picker("", selection: $setData.rpm) {
-            ForEach(allPossibleRPM, id: \.self) { rpm in
-                Text("\(rpm) RPM")
-            }
-        }
-        .pickerStyle(WheelPickerStyle())
-    }
-    
-    var effortPicker: some View {
-        Picker("", selection: $setData.effort) {
-            ForEach(0 ..< effort.count) {
-                Text("\(effort[$0])")
-            }
-        }
-        .pickerStyle(SegmentedPickerStyle())
-    }
+    private let effort = Array(1...10)
+    private let allPossibleRPM = Array(arrayLiteral: 45, 50, 55, 60, 65, 70, 75, 80, 90, 65, 100, 105, 110, 115, 120, 125, 130, 135, 140)
     
     var body: some View {
         Form {
             Section{
             TextField("Description", text: $setData.description)
                 .font(.largeTitle)
+            ColorPicker("Color", selection: $setData.color)
+            }
+            Section {
+                Picker("", selection: $setData.rpm) {
+                    ForEach(allPossibleRPM, id: \.self) { rpm in
+                        Text("\(rpm) RPM")
+                    }
+                }
+                .pickerStyle(WheelPickerStyle())
+            }
+            Section {
+                HStack {
+                    Text("Effort")
+                        .font(.title2)
+                    Picker("", selection: $setData.effort) {
+                        ForEach(0 ..< effort.count) {
+                            Text("\(effort[$0])")
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
             }
             Section {
                 HStack {
@@ -43,16 +46,6 @@ struct AddSet: View {
                         Text(TimerManager.timeStamp(time: setData.duration))
                             .font(.title2)
                     }
-                }
-            }
-            Section {
-                rpmPicker
-            }
-            Section {
-                HStack {
-                    Text("Effort")
-                        .font(.title2)
-                    effortPicker
                 }
             }
         }

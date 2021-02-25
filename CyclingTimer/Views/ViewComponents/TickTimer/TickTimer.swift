@@ -17,7 +17,7 @@ struct TickTimer: View {
             
             RotatedRoundedRect(angle: angle,
                                radius: 150.0,
-                               filled: Int(timerManager.progress * 100)>index)
+                               filled: Int(timerManager.setProgress * 100)>index)
         }
     }
     

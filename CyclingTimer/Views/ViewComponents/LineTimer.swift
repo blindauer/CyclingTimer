@@ -19,7 +19,7 @@ struct LineTimer: View {
     
     var progressCircle: some View {
         Circle()
-            .trim(from: 0.0, to: CGFloat(timerManager.progress))
+            .trim(from: 0.0, to: CGFloat(timerManager.setProgress))
             .stroke(style: StrokeStyle(lineWidth: 40.0, lineCap: .round, lineJoin: .round))
             .foregroundColor(.accentColor)
             .rotationEffect(Angle(degrees: 270.0))

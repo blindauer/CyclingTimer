@@ -25,7 +25,6 @@ struct NewSessionView: View {
             Section {
                 TextField("Session name", text: $sessionData.name)
                     .font(.largeTitle)
-                ColorPicker("Color", selection: $sessionData.color)
             }
             ForEach(sessionData.segments) { segmentData in
                 Section {
@@ -65,14 +64,14 @@ struct NewSessionView: View {
 
 struct NewSessionView_Previews: PreviewProvider {
     static var previews: some View {
-        let warmupSets = [Set(description: "Warmup", duration: 60, rpm: 75, effort: 6)]
-        let workSets = [Set(description: "Tempo", duration: 60, rpm: 100, effort: 9),
-                        Set(description: "Recover", duration: 60, rpm: 70, effort: 4)]
+        let warmupSets = [Set(description: "Warmup", duration: 60, rpm: 75, effort: 6, color: .green)]
+        let workSets = [Set(description: "Tempo", duration: 60, rpm: 100, effort: 9, color: .red),
+                        Set(description: "Recover", duration: 60, rpm: 70, effort: 4, color: .yellow)]
         let segments = [Segment(sets: warmupSets, repetitions: 0, type: .Warmup),
                         Segment(sets: workSets, repetitions: 2, type: .Work)]
         let existingSession = Session(name: "Morning", segments: segments)
             
-        NewSessionView(sessionData: .constant(Session.getData(from: Session())))
+        //NewSessionView(sessionData: .constant(Session.getData(from: Session())))
         NewSessionView(sessionData: .constant(Session.getData(from: existingSession)))
     }
 }

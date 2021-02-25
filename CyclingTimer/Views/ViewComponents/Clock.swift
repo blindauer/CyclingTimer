@@ -12,7 +12,7 @@ struct Clock: View {
     
     var body: some View {
         VStack {
-            Text(timerManager.timeStamp)
+            Text(timerManager.setTimeRemainingTimeStamp)
                 .font(.system(size: 80))
         }
     }

@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct SessionProgressViewStyle: ProgressViewStyle {
+    var color: Color
+    func makeBody(configuration: Configuration) -> some View {
+        ProgressView(configuration)
+            .foregroundColor(color)
+//            .shadow(color: color,
+//                    radius: 4.0, x: 1.0, y: 2.0)
+    }
+}
+
 struct ActiveSessionView: View {
     @Binding var session: Session
     @StateObject var timerManager = TimerManager()
@@ -14,11 +24,12 @@ struct ActiveSessionView: View {
     var body: some View {
         VStack {
             HStack {
-                Label(timerManager.elapsedTimeStamp, systemImage: "hourglass.bottomhalf.fill")
+                Label(timerManager.sessionTimeElapsedTimeStamp, systemImage: "hourglass.bottomhalf.fill")
                 Spacer()
-                Label(timerManager.remainingTimeStamp, systemImage: "hourglass.tophalf.fill")
+                Label(timerManager.sessionTimeRemainingTimeStamp, systemImage: "hourglass.tophalf.fill")
             }
-            ProgressView(value: 5, total: 15)
+            ProgressView(value: timerManager.sessionProgress)
+                .progressViewStyle(SessionProgressViewStyle(color: timerManager.setColor))
             VStack {
                 Clock(timerManager: timerManager)
                 ZStack {
