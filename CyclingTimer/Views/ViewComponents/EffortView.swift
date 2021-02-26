@@ -12,7 +12,7 @@ let effortColors: [Color] = [.green, .green, .green, .green, .yellow, .yellow, .
 let shortEdge: CGFloat = 5
 let longEdge: CGFloat = 30
 
-struct EffortBadgeView: View {
+struct NumberBadgeView: View {
     var effort: Int
     
     var body: some View {
@@ -55,7 +55,7 @@ struct HorizontalEffortView: View {
                     BarView(effort: effort, width: shortEdge, height: longEdge, color: color)
                 }
             }
-            EffortBadgeView(effort: effort)
+            NumberBadgeView(effort: effort)
         }
     }
 }
@@ -71,7 +71,7 @@ struct VerticalEffortView: View {
                     BarView(effort: effort, width: longEdge, height: shortEdge, color: color)
                 }
             }
-            EffortBadgeView(effort: effort)
+            NumberBadgeView(effort: effort)
         }
     }
 }

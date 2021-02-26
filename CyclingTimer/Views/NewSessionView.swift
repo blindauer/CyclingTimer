@@ -12,11 +12,25 @@ struct NewSessionView: View {
     @State private var isPresented = false
     @State private var newSetData = Set.Data()
     
-    private var plusButton: some View {
+    private var addSetButton: some View {
         Button(action: {
             isPresented.toggle()
         }) {
-            Image(systemName: "plus.circle.fill")
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                Text("Set")
+            }
+        }
+    }
+    
+    private var addSegmentButton: some View {
+        Button(action: {
+            sessionData.segments.append(Segment.Data())
+        }) {
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                Text("Segment")
+            }
         }
     }
     
@@ -27,14 +41,17 @@ struct NewSessionView: View {
                     .font(.largeTitle)
             }
             ForEach(sessionData.segments) { segmentData in
-                Section {
+                Section() {
                     ForEach(sessionData.segments[index(for: segmentData)].sets) { setData in
                         SetView(set: Set.getSet(from: setData))
                     }
-                    .onDelete { indices in
-                        sessionData.segments[index(for: segmentData)].sets.remove(atOffsets: indices)
+//                    .onMove(perform: moveSet)
+//                    .onDelete(perform: deleteSet)
+                    addSetButton
+                    HStack {
+                        Spacer()
+                        RepetitionsView(repetitions: $sessionData.segments[index(for: segmentData)].repetitions)
                     }
-                    plusButton
                     .sheet(isPresented: $isPresented) {
                         NavigationView {
                             AddSet(setData: $newSetData)
@@ -50,9 +67,32 @@ struct NewSessionView: View {
                     }
                 }
             }
+            Section {
+                addSegmentButton
+            }
         }
         .listStyle(InsetGroupedListStyle())
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                EditButton()
+            }
+        }
     }
+    
+    
+    /*
+    func moveSet(from: IndexSet, to: Int) {
+        withAnimation {
+            sessionData.segments[0].sets.move(fromOffsets: from, toOffset: to)
+        }
+    }
+
+    private func deleteSet(offsets: IndexSet) {
+        withAnimation {
+            sessionData.segments[0].sets.remove(atOffsets: offsets)
+        }
+    }
+    */
     
     private func index(for segmentData: Segment.Data) -> Int {
         guard let segmentIndex = sessionData.segments.firstIndex(where: { $0.id == segmentData.id }) else {
@@ -71,7 +111,6 @@ struct NewSessionView_Previews: PreviewProvider {
                         Segment(sets: workSets, repetitions: 2, type: .Work)]
         let existingSession = Session(name: "Morning", segments: segments)
             
-        //NewSessionView(sessionData: .constant(Session.getData(from: Session())))
         NewSessionView(sessionData: .constant(Session.getData(from: existingSession)))
     }
 }

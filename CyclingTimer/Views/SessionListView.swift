@@ -34,7 +34,6 @@ struct SessionListView: View {
                         Image(systemName: "plus")
                     })
                 }
-
                 ToolbarItem(placement: .bottomBar) {
                     EditButton()
                 }

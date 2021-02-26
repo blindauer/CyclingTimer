@@ -42,7 +42,7 @@ struct AddSet: View {
             }
             Section {
                 HStack {
-                    Stepper(value: $setData.duration, in: 0.0...3600.0, step: 10.0) {
+                    Stepper(value: $setData.duration, in: 0...3600, step: 10) {
                         Text(TimerManager.timeStamp(time: setData.duration))
                             .font(.title2)
                     }
