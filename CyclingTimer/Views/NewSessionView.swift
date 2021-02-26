@@ -11,6 +11,8 @@ struct NewSessionView: View {
     @Binding var sessionData: Session.Data
     @State private var isPresented = false
     @State private var newSetData = Set.Data()
+    @State private var reps: String = ""
+    @State private var repsIsEditing = false
     
     private var addSetButton: some View {
         Button(action: {
@@ -49,9 +51,22 @@ struct NewSessionView: View {
 //                    .onDelete(perform: deleteSet)
                     addSetButton
                     HStack {
-                        Spacer()
-                        RepetitionsView(repetitions: $sessionData.segments[index(for: segmentData)].repetitions)
+                        Text("# of reps:")
+                            .foregroundColor(lightGray)
+                        TextField(
+                            "\(sessionData.segments[index(for: segmentData)].repetitions)",
+                            text: $reps
+                        ) { isEditing in
+                            repsIsEditing = repsIsEditing
+                        } onCommit: {
+                            sessionData.segments[index(for: segmentData)].repetitions = Int(reps) ?? 0
+                        }
+                        .keyboardType(.numberPad)
+                        .foregroundColor(lightGray)
                     }
+//                    NavigationLink(destination: RepetitionsView(repetitions: $sessionData.segments[index(for: segmentData)].repetitions)) {
+//                        Text("# reps \(sessionData.segments[index(for: segmentData)].repetitions)")
+//                    }
                     .sheet(isPresented: $isPresented) {
                         NavigationView {
                             AddSet(setData: $newSetData)
