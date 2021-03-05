@@ -14,6 +14,7 @@ struct ActiveSessionView: View {
     private var clock: some View {
         Text(timerManager.setTimeRemainingTimeStamp)
             .font(.system(size: 80))
+            .blur(radius: timerManager.timerState == .paused ? 10 : 0)
     }
     
     private var playButtonOverlay: some View {
@@ -38,18 +39,18 @@ struct ActiveSessionView: View {
     }
     
     var body: some View {
-        ZStack {
-            VStack {
-                clock
+        VStack {
+            clock
+            ZStack {
                 LineTimer(timerManager: timerManager)
-            }
-            .blur(radius: timerManager.timerState == .paused ? 10 : 0)
-            if timerManager.timerState == .paused {
-                playButtonOverlay
+                    .blur(radius: timerManager.timerState == .paused ? 10 : 0)
+                if timerManager.timerState == .paused {
+                    playButtonOverlay
+                }
             }
         }
-        .padding(20.0)
         .contentShape(Rectangle())
+        .ignoresSafeArea()
         .onTapGesture {
             timerManager.pause()
         }
