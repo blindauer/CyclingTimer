@@ -64,6 +64,9 @@ struct NewSessionView: View {
                         .keyboardType(.numberPad)
                         .foregroundColor(lightGray)
                     }
+//                    NavigationLink(destination: RepetitionsView(repetitions: $sessionData.segments[index(for: segmentData)].repetitions)) {
+//                        Text("# reps \(sessionData.segments[index(for: segmentData)].repetitions)")
+//                    }
                     .sheet(isPresented: $isPresented) {
                         NavigationView {
                             AddSet(setData: $newSetData)
