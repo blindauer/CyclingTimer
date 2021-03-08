@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+private enum AnimatedCirclePosition {
+    case inner
+    case middle
+    case outer
+}
+
 struct LineTimer: View {
     @ObservedObject var timerManager: TimerManager
     
@@ -16,14 +22,21 @@ struct LineTimer: View {
     let sessionPadding: CGFloat = 20.0
     
     var animatedCircles: some View {
-        Circle()
-            .stroke(style: StrokeStyle(lineWidth: 2.0, lineCap: .round, lineJoin: .round))
-            .foregroundColor(timerManager.setColor)
-            .padding(timerManager.timerState == .running ? startPadding() : endPadding())
-            .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
+        ZStack {
+            Circle()
+                .stroke(style: StrokeStyle(lineWidth: 1.0, lineCap: .round, lineJoin: .round))
+                .padding(timerManager.timerState == .running ? startPadding(position: .inner) : endPadding(position: .inner))
+            Circle()
+                .stroke(style: StrokeStyle(lineWidth: 2.0, lineCap: .round, lineJoin: .round))
+                .padding(timerManager.timerState == .running ? startPadding(position: .middle) : endPadding(position: .middle))
+                .opacity(0.75)
+            Circle()
+                .stroke(style: StrokeStyle(lineWidth: 1.0, lineCap: .round, lineJoin: .round))
+                .padding(timerManager.timerState == .running ? startPadding(position: .outer) : endPadding(position: .outer))
+        }
+        .foregroundColor(timerManager.setColor)
+        .animation(Animation.easeInOut(duration: 1).repeat(while: timerManager.timerState == .running))
     }
-    
-
     
     var setBackgroundCircle: some View {
         Circle()
@@ -71,12 +84,29 @@ struct LineTimer: View {
         }
     }
     
-    private func startPadding() -> CGFloat {
-        return sessionPadding - sessionLineWidth / 2 + sessionLineWidth
+    private func startPadding(position: AnimatedCirclePosition) -> CGFloat {
+        let startPadding = sessionPadding - sessionLineWidth / 2 + sessionLineWidth
+        switch position {
+        case .inner:
+            return startPadding + 0.0
+        case .middle:
+            return startPadding + 10.0
+        case .outer:
+            return startPadding + 20.0
+        }
     }
     
-    private func endPadding() -> CGFloat {
+    private func endPadding(position: AnimatedCirclePosition) -> CGFloat {
         return setPadding - setLineWidth / 2
+//        let endPadding = setPadding - setLineWidth / 2
+//        switch position {
+//        case .inner:
+//            return endPadding - 0.0
+//        case .middle:
+//            return endPadding - 0.0
+//        case .outer:
+//            return endPadding - 0.0
+//        }
     }
 }
 
