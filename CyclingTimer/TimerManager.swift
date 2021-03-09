@@ -38,6 +38,10 @@ class TimerManager: ObservableObject {
     @Published var sessionProgress: Double = .zero
     /// Color of the currently running set
     @Published var setColor: Color = Color.accentColor
+    /// Current set RPM
+    @Published var setRPM: Int = 45
+    /// Current set description
+    @Published var setDescription: String = ""
     
     private var segmentIndex: Int = 0
     private var setIndex: Int = 0
@@ -68,12 +72,16 @@ class TimerManager: ObservableObject {
         sessionTimeRemainingTimeStamp = TimerManager.timeStamp(time: newSession.duration)
         setTimeRemainingTimeStamp = TimerManager.timeStamp(time: newSession.segments[segmentIndex].sets[setIndex].duration)
         setColor = newSession.segments[segmentIndex].sets[0].color
+        setRPM = newSession.segments[segmentIndex].sets[0].rpm
+        setDescription = newSession.segments[segmentIndex].sets[0].description
     }
     
     func start() {
         timerState = .running
-        if let color = session?.segments[segmentIndex].sets[setIndex].color {
-            setColor = color
+        if let session = session {
+            setColor = session.segments[segmentIndex].sets[setIndex].color
+            setRPM = session.segments[segmentIndex].sets[0].rpm
+            setDescription = session.segments[segmentIndex].sets[0].description
         }
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
             self.timerFired()

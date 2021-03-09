@@ -11,9 +11,15 @@ struct ActiveSessionView: View {
     @Binding var session: Session
     @StateObject var timerManager = TimerManager()
     
-    private var clock: some View {
-        Text(timerManager.setTimeRemainingTimeStamp)
-            .font(.system(size: 80))
+    private var description: some View {
+        Text(timerManager.setDescription)
+            .font(.system(size: 40))
+            .blur(radius: timerManager.timerState == .paused ? 10 : 0)
+    }
+    
+    private var sessionTimeRemaining: some View {
+        Text(timerManager.sessionTimeRemainingTimeStamp)
+            .font(.system(size: 40))
             .blur(radius: timerManager.timerState == .paused ? 10 : 0)
     }
     
@@ -40,7 +46,13 @@ struct ActiveSessionView: View {
     
     var body: some View {
         VStack {
-            clock
+            description
+                .padding(.top, 60)
+            EffortView(effort: 9)
+                .scaleEffect(CGSize(width: 2.1, height: 2.1))
+            Spacer()
+            sessionTimeRemaining
+                .padding(.top, 60)
             ZStack {
                 LineTimer(timerManager: timerManager)
                     .blur(radius: timerManager.timerState == .paused ? 10 : 0)

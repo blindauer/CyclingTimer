@@ -20,7 +20,7 @@ struct SetView: View {
             }
             HStack {
                 HStack(spacing: 0) {
-                    HorizontalEffortView(effort: set.effort)
+                    EffortView(effort: set.effort, useColor: false, tintColor: set.color)
                 }
                 Spacer()
                 HStack(spacing: 0) {

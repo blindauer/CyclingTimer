@@ -21,7 +21,21 @@ struct LineTimer: View {
     let setPadding: CGFloat = 80.0
     let sessionPadding: CGFloat = 20.0
     
-    var animatedCircles: some View {
+    private var rpm: some View {
+        Text("\(timerManager.setRPM) RPM")
+            .fontWeight(.bold)
+            .blur(radius: timerManager.timerState == .paused ? 10 : 0)
+            .font(.largeTitle)
+    }
+    
+    private var clock: some View {
+        Text(timerManager.setTimeRemainingTimeStamp)
+            .fontWeight(.bold)
+            .font(.largeTitle)
+            .blur(radius: timerManager.timerState == .paused ? 10 : 0)
+    }
+    
+    private var animatedCircles: some View {
         ZStack {
             Circle()
                 .stroke(style: StrokeStyle(lineWidth: 1.0, lineCap: .round, lineJoin: .round))
@@ -38,7 +52,7 @@ struct LineTimer: View {
         .animation(Animation.easeInOut(duration: 1).repeat(while: timerManager.timerState == .running))
     }
     
-    var setBackgroundCircle: some View {
+    private var setBackgroundCircle: some View {
         Circle()
             .stroke(lineWidth: setLineWidth)
             .opacity(0.3)
@@ -46,7 +60,7 @@ struct LineTimer: View {
             .padding(setPadding)
     }
     
-    var setProgressCircle: some View {
+    private var setProgressCircle: some View {
         Circle()
             .trim(from: 0.0, to: CGFloat(timerManager.setProgress))
             .stroke(style: StrokeStyle(lineWidth: setLineWidth, lineCap: .round, lineJoin: .round))
@@ -56,7 +70,7 @@ struct LineTimer: View {
             .padding(setPadding)
     }
     
-    var sessionBackgroundCircle: some View {
+    private var sessionBackgroundCircle: some View {
         Circle()
             .stroke(lineWidth: sessionLineWidth)
             .opacity(0.3)
@@ -64,7 +78,7 @@ struct LineTimer: View {
             .padding(sessionPadding)
     }
     
-    var sessionProgressCircle: some View {
+    private var sessionProgressCircle: some View {
         Circle()
             .trim(from: 0.0, to: CGFloat(timerManager.sessionProgress))
             .stroke(style: StrokeStyle(lineWidth: sessionLineWidth, lineCap: .round, lineJoin: .round))
@@ -81,6 +95,13 @@ struct LineTimer: View {
             sessionProgressCircle
             setBackgroundCircle
             setProgressCircle
+            VStack {
+                clock
+                Rectangle()
+                    .frame(height: 2)
+                rpm
+            }
+            .padding(setPadding + setLineWidth * 1.5)
         }
     }
     
@@ -98,15 +119,6 @@ struct LineTimer: View {
     
     private func endPadding(position: AnimatedCirclePosition) -> CGFloat {
         return setPadding - setLineWidth / 2
-//        let endPadding = setPadding - setLineWidth / 2
-//        switch position {
-//        case .inner:
-//            return endPadding - 0.0
-//        case .middle:
-//            return endPadding - 0.0
-//        case .outer:
-//            return endPadding - 0.0
-//        }
     }
 }
 
