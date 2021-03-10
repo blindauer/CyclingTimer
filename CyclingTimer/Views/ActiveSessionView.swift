@@ -44,15 +44,8 @@ struct ActiveSessionView: View {
         }
     }
     
-    var body: some View {
+    private var timerView: some View {
         VStack {
-            description
-                .padding(.top, 60)
-            EffortView(effort: 9)
-                .scaleEffect(CGSize(width: 2.1, height: 2.1))
-            Spacer()
-            sessionTimeRemaining
-                .padding(.top, 60)
             ZStack {
                 LineTimer(timerManager: timerManager)
                     .blur(radius: timerManager.timerState == .paused ? 10 : 0)
@@ -65,6 +58,25 @@ struct ActiveSessionView: View {
         .ignoresSafeArea()
         .onTapGesture {
             timerManager.pause()
+        }
+    }
+    
+    private var effort: some View {
+        EffortView(effort: timerManager.setEffort)
+            .blur(radius: timerManager.timerState == .paused ? 10 : 0)
+    }
+    
+    var body: some View {
+        ZStack {
+            timerView
+            VStack {
+                Spacer()
+                HStack {
+                    description
+                    effort
+                }
+                sessionTimeRemaining
+            }
         }
         .onAppear {
             timerManager.initialize(with: session)
