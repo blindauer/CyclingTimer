@@ -70,20 +70,22 @@ struct ActiveSessionView: View {
         ZStack {
             timerView
             VStack {
-                Spacer()
                 HStack {
                     description
                     effort
                 }
+                Spacer()
                 sessionTimeRemaining
             }
         }
         .onAppear {
             timerManager.initialize(with: session)
             timerManager.start()
+            UIApplication.shared.isIdleTimerDisabled = true
         }
         .onDisappear {
             timerManager.pause()
+            UIApplication.shared.isIdleTimerDisabled = false
         }
     }
 }
@@ -93,3 +95,5 @@ struct SessionDetail_Previews: PreviewProvider {
         ActiveSessionView(session: .constant(Session.data[0]))
     }
 }
+
+
