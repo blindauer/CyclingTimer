@@ -67,17 +67,16 @@ struct ActiveSessionView: View {
     }
     
     var body: some View {
-        ZStack {
-            timerView
-            VStack {
-                HStack {
-                    description
-                    effort
-                }
-                Spacer()
-                sessionTimeRemaining
+        VStack {
+            HStack {
+                description
+                effort
             }
+            Spacer()
+            timerView
+            sessionTimeRemaining
         }
+        .padding(.bottom)
         .onAppear {
             timerManager.initialize(with: session)
             timerManager.start()
@@ -92,7 +91,9 @@ struct ActiveSessionView: View {
 
 struct SessionDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ActiveSessionView(session: .constant(Session.data[0]))
+        NavigationView {
+            ActiveSessionView(session: .constant(Session.data[0]))
+        }
     }
 }
 

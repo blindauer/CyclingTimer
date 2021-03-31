@@ -47,8 +47,6 @@ struct NewSessionView: View {
                     ForEach(sessionData.segments[index(for: segmentData)].sets) { setData in
                         SetView(set: Set.getSet(from: setData))
                     }
-//                    .onMove(perform: moveSet)
-//                    .onDelete(perform: deleteSet)
                     addSetButton
                     HStack {
                         Text("# of reps:")
@@ -64,9 +62,6 @@ struct NewSessionView: View {
                         .keyboardType(.numberPad)
                         .foregroundColor(lightGray)
                     }
-//                    NavigationLink(destination: RepetitionsView(repetitions: $sessionData.segments[index(for: segmentData)].repetitions)) {
-//                        Text("# reps \(sessionData.segments[index(for: segmentData)].repetitions)")
-//                    }
                     .sheet(isPresented: $isPresented) {
                         NavigationView {
                             AddSet(setData: $newSetData)
@@ -93,21 +88,6 @@ struct NewSessionView: View {
             }
         }
     }
-    
-    
-    /*
-    func moveSet(from: IndexSet, to: Int) {
-        withAnimation {
-            sessionData.segments[0].sets.move(fromOffsets: from, toOffset: to)
-        }
-    }
-
-    private func deleteSet(offsets: IndexSet) {
-        withAnimation {
-            sessionData.segments[0].sets.remove(atOffsets: offsets)
-        }
-    }
-    */
     
     private func index(for segmentData: Segment.Data) -> Int {
         guard let segmentIndex = sessionData.segments.firstIndex(where: { $0.id == segmentData.id }) else {

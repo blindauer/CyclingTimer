@@ -25,13 +25,13 @@ struct LineTimer: View {
         Text("\(timerManager.setRPM) RPM")
             .fontWeight(.bold)
             .blur(radius: timerManager.timerState == .paused ? 10 : 0)
-            .font(.largeTitle)
+            .font(.title)
     }
     
     private var clock: some View {
         Text(timerManager.setTimeRemainingTimeStamp)
             .fontWeight(.bold)
-            .font(.largeTitle)
+            .font(.title)
             .blur(radius: timerManager.timerState == .paused ? 10 : 0)
     }
     

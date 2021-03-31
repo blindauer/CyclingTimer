@@ -18,6 +18,7 @@ enum UpdateMode {
     case set
     case session
 }
+
 /// Keeps time for a session sets and supplies time conversions
 class TimerManager: ObservableObject {
     /// Used to indicate to parent whether progress changes should be animated (i.e. when switching to new set animation is disabled)
