@@ -11,8 +11,6 @@
 		C7075E0225BF22AD000B611C /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E0125BF22AD000B611C /* SessionListView.swift */; };
 		C7075E0425BF22AE000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E0325BF22AE000B611C /* Assets.xcassets */; };
 		C7075E0725BF22AE000B611C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E0625BF22AE000B611C /* Preview Assets.xcassets */; };
-		C7075E1225BF22AE000B611C /* CyclingTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E1125BF22AE000B611C /* CyclingTimerTests.swift */; };
-		C7075E1D25BF22AE000B611C /* CyclingTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7075E1C25BF22AE000B611C /* CyclingTimerUITests.swift */; };
 		C7075E2225BF22AE000B611C /* CyclingTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C7075E2725BF22AF000B611C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7075E2625BF22AF000B611C /* Assets.xcassets */; };
 		C7075E2E25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C7075E2D25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -54,20 +52,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C7075E0E25BF22AE000B611C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C7075DFB25BF22AD000B611C;
-			remoteInfo = CyclingTimer;
-		};
-		C7075E1925BF22AE000B611C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C7075DFB25BF22AD000B611C;
-			remoteInfo = CyclingTimer;
-		};
 		C7075E2325BF22AE000B611C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7075DF425BF22AD000B611C /* Project object */;
@@ -116,10 +100,8 @@
 		C7075E0325BF22AE000B611C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7075E0625BF22AE000B611C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7075E0825BF22AE000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7075E0D25BF22AE000B611C /* CyclingTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyclingTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7075E1125BF22AE000B611C /* CyclingTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingTimerTests.swift; sourceTree = "<group>"; };
 		C7075E1325BF22AE000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7075E1825BF22AE000B611C /* CyclingTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyclingTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7075E1C25BF22AE000B611C /* CyclingTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingTimerUITests.swift; sourceTree = "<group>"; };
 		C7075E1E25BF22AE000B611C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CyclingTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,20 +155,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7075E0A25BF22AE000B611C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7075E1525BF22AE000B611C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C7075E2A25BF22AF000B611C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				C7075DFC25BF22AD000B611C /* CyclingTimer.app */,
-				C7075E0D25BF22AE000B611C /* CyclingTimerTests.xctest */,
-				C7075E1825BF22AE000B611C /* CyclingTimerUITests.xctest */,
 				C7075E2125BF22AE000B611C /* CyclingTimer WatchKit App.app */,
 				C7075E2D25BF22AF000B611C /* CyclingTimer WatchKit Extension.appex */,
 			);
@@ -406,42 +372,6 @@
 			productReference = C7075DFC25BF22AD000B611C /* CyclingTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C7075E0C25BF22AE000B611C /* CyclingTimerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7075E5025BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerTests" */;
-			buildPhases = (
-				C7075E0925BF22AE000B611C /* Sources */,
-				C7075E0A25BF22AE000B611C /* Frameworks */,
-				C7075E0B25BF22AE000B611C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C7075E0F25BF22AE000B611C /* PBXTargetDependency */,
-			);
-			name = CyclingTimerTests;
-			productName = CyclingTimerTests;
-			productReference = C7075E0D25BF22AE000B611C /* CyclingTimerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C7075E1725BF22AE000B611C /* CyclingTimerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7075E5325BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerUITests" */;
-			buildPhases = (
-				C7075E1425BF22AE000B611C /* Sources */,
-				C7075E1525BF22AE000B611C /* Frameworks */,
-				C7075E1625BF22AE000B611C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C7075E1A25BF22AE000B611C /* PBXTargetDependency */,
-			);
-			name = CyclingTimerUITests;
-			productName = CyclingTimerUITests;
-			productReference = C7075E1825BF22AE000B611C /* CyclingTimerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		C7075E2025BF22AE000B611C /* CyclingTimer WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7075E4925BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimer WatchKit App" */;
@@ -488,14 +418,6 @@
 					C7075DFB25BF22AD000B611C = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					C7075E0C25BF22AE000B611C = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = C7075DFB25BF22AD000B611C;
-					};
-					C7075E1725BF22AE000B611C = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = C7075DFB25BF22AD000B611C;
-					};
 					C7075E2025BF22AE000B611C = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -519,8 +441,6 @@
 			projectRoot = "";
 			targets = (
 				C7075DFB25BF22AD000B611C /* CyclingTimer */,
-				C7075E0C25BF22AE000B611C /* CyclingTimerTests */,
-				C7075E1725BF22AE000B611C /* CyclingTimerUITests */,
 				C7075E2025BF22AE000B611C /* CyclingTimer WatchKit App */,
 				C7075E2C25BF22AF000B611C /* CyclingTimer WatchKit Extension */,
 			);
@@ -540,20 +460,6 @@
 				C7EA3D0B25CC4DC500BEBFF8 /* Localizable.stringsdict in Resources */,
 				C7075E0425BF22AE000B611C /* Assets.xcassets in Resources */,
 				C7EA3D2325CC4DD600BEBFF8 /* Localizable.stringsdict in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7075E0B25BF22AE000B611C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7075E1625BF22AE000B611C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,22 +514,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7075E0925BF22AE000B611C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7075E1225BF22AE000B611C /* CyclingTimerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7075E1425BF22AE000B611C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7075E1D25BF22AE000B611C /* CyclingTimerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C7075E2925BF22AF000B611C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,16 +529,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C7075E0F25BF22AE000B611C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C7075DFB25BF22AD000B611C /* CyclingTimer */;
-			targetProxy = C7075E0E25BF22AE000B611C /* PBXContainerItemProxy */;
-		};
-		C7075E1A25BF22AE000B611C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C7075DFB25BF22AD000B611C /* CyclingTimer */;
-			targetProxy = C7075E1925BF22AE000B611C /* PBXContainerItemProxy */;
-		};
 		C7075E2425BF22AE000B611C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C7075E2025BF22AE000B611C /* CyclingTimer WatchKit App */;
@@ -963,98 +843,6 @@
 			};
 			name = Release;
 		};
-		C7075E5125BF22AF000B611C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CH5ZC7B8ED;
-				INFOPLIST_FILE = CyclingTimerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyclingTimer.app/CyclingTimer";
-			};
-			name = Debug;
-		};
-		C7075E5225BF22AF000B611C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CH5ZC7B8ED;
-				INFOPLIST_FILE = CyclingTimerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyclingTimer.app/CyclingTimer";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C7075E5425BF22AF000B611C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CH5ZC7B8ED;
-				INFOPLIST_FILE = CyclingTimerUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CyclingTimer;
-			};
-			name = Debug;
-		};
-		C7075E5525BF22AF000B611C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CH5ZC7B8ED;
-				INFOPLIST_FILE = CyclingTimerUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = civilis.CyclingTimerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CyclingTimer;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1090,24 +878,6 @@
 			buildConfigurations = (
 				C7075E4E25BF22AF000B611C /* Debug */,
 				C7075E4F25BF22AF000B611C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C7075E5025BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7075E5125BF22AF000B611C /* Debug */,
-				C7075E5225BF22AF000B611C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C7075E5325BF22AF000B611C /* Build configuration list for PBXNativeTarget "CyclingTimerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7075E5425BF22AF000B611C /* Debug */,
-				C7075E5525BF22AF000B611C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
